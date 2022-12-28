@@ -1,0 +1,197 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{11259949571506953890,4658595517901597585}}
+	s %t{"xiiAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"Animated Mesh"}
+		VarArray %Dependencies
+		{
+			s{"Models/Eagle/Eagle.fbx"}
+		}
+		Uuid %DocumentID{u4{11259949571506953890,4658595517901597585}}
+		u4 %Hash{12919822394919457603}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %References
+		{
+			s{"{ 5ad8b0d4-c21b-48e8-aa52-cb84670bd88e }"}
+			s{"{ c2d222e7-8fa7-463a-b6e0-750fd0c27473 }"}
+		}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{12028742715029320635,4878311419860966169}}
+	s %t{"xiiMaterialResourceSlot"}
+	u3 %v{1}
+	p
+	{
+		s %Label{"Fogel_Mat"}
+		s %Resource{"{ c2d222e7-8fa7-463a-b6e0-750fd0c27473 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{5550693818146266536,5085358910719600413}}
+	s %t{"xiiAnimatedMeshAssetProperties"}
+	u3 %v{2}
+	p
+	{
+		s %DefaultSkeleton{"{ 5ad8b0d4-c21b-48e8-aa52-cb84670bd88e }"}
+		b %ImportMaterials{1}
+		VarArray %Materials
+		{
+			Uuid{u4{12028742715029320635,4878311419860966169}}
+		}
+		s %MeshFile{"Models/Eagle/Eagle.fbx"}
+		s %NormalPrecision{"xiiMeshNormalPrecision::_10Bit"}
+		b %RecalculateNormals{0}
+		b %RecalculateTangents{1}
+		s %TexCoordPrecision{"xiiMeshTexCoordPrecision::_16Bit"}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"xiiDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{5550693818146266536,5085358910719600413}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{1806006595755264957,1330264583885842403}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiEnumBase"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{4073569215080975946,1365156275592962121}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::IsEnum|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiMeshNormalPrecision"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{8224268647907297484,2300230217040154700}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{3149061464671870323,5076500042432112790}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"xiiEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"xiiMaterialResourceSlot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7379086958333228156,13017606131801563376}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"xiiEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"xiiAnimatedMeshAssetProperties"}
+		u3 %TypeVersion{2}
+	}
+}
+o
+{
+	Uuid %id{u4{6761040301617651743,14776788597402396987}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::IsEnum|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiMeshTexCoordPrecision"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{11757360558073105519,15956676577570765383}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

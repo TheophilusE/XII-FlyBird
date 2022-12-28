@@ -1,0 +1,201 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{8626195131096353449,5696590371110424537}}
+	s %t{"xiiAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"Animation Clip"}
+		VarArray %Dependencies
+		{
+			s{"Models/Eagle/Eagle.fbx"}
+		}
+		Uuid %DocumentID{u4{8626195131096353449,5696590371110424537}}
+		u4 %Hash{18349716385224077893}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %References
+		{
+			s{"{ f4c06b91-a7f0-40a6-a2de-7b3e7a60439c }"}
+		}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{10087871061956820876,5100126903282087263}}
+	s %t{"xiiAnimationClipAssetProperties"}
+	u3 %v{3}
+	p
+	{
+		b %Additive{0}
+		VarArray %AvailableClips
+		{
+			s{"Armature|Attac"}
+			s{"Armature|Fly"}
+			s{"Armature|FlyStay"}
+			s{"Armature|LampAction"}
+			s{"Lamp|LampAction"}
+		}
+		Vec3 %ConstantRootMotion{f{0,0,0}}
+		Uuid %EventTrack{u4{4634622959502293726,17312239848895544400}}
+		s %File{"Models/Eagle/Eagle.fbx"}
+		u3 %FirstFrame{0}
+		u3 %NumFrames{0}
+		s %PreviewMesh{"{ f4c06b91-a7f0-40a6-a2de-7b3e7a60439c }"}
+		s %RootMotion{"xiiRootMotionSource::None"}
+		s %UseAnimationClip{"Armature|Fly"}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"xiiDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{10087871061956820876,5100126903282087263}}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{4634622959502293726,17312239848895544400}}
+	s %t{"xiiEventTrackData"}
+	u3 %v{3}
+	p
+	{
+		VarArray %ControlPoints{}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{1806006595755264957,1330264583885842403}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiEnumBase"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{8224268647907297484,2300230217040154700}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7409838472765538077,4473869165450720121}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiEventTrackData"}
+		u3 %TypeVersion{3}
+	}
+}
+o
+{
+	Uuid %id{u4{5615212962884457449,6065294331598907871}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::IsEnum|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiEnumBase"}
+		s %PluginName{"xiiEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"xiiRootMotionSource"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{12972598776852427607,9156160497860515264}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiEventTrackControlPointData"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{2780560481169904873,12929189128859149227}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiReflectedClass"}
+		s %PluginName{"xiiEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"xiiAnimationClipAssetProperties"}
+		u3 %TypeVersion{3}
+	}
+}
+o
+{
+	Uuid %id{u4{11757360558073105519,15956676577570765383}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

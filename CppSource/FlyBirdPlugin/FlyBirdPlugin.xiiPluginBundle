@@ -1,0 +1,13 @@
+PluginInfo
+{
+	bool %Mandatory{false}
+	string %DisplayName{"FlyBird"}
+	string %Description{"C++ code for the FlyBird project."}
+	string %EditorPlugins{}
+	string %EditorEnginePlugins{}
+	string %RuntimePlugins{"FlyBirdPlugin"}
+	string %PackageDependencies{}
+	string %RequiredPlugins{}
+	string %ExclusiveFeatures{"ProjectPlugin"}
+	string %EnabledInTemplates{}
+}
