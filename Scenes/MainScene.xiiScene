@@ -11,11 +11,12 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{5163687559549039107}
+		u4 %Hash{6758723665948957423}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
 		{
+			s{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
 			s{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
 			s{"{ aa6cf007-c3b0-4efa-8874-8c1b8f7f8fca }"}
 		}
@@ -143,6 +144,18 @@ o
 }
 o
 {
+	Uuid %id{u4{3975628602980009892,5221704472846759266}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
 	Uuid %id{u4{5166425742529995429,5562399254696729571}}
 	s %t{"xiiPrefabReferenceComponent"}
 	u3 %v{4}
@@ -151,6 +164,32 @@ o
 		b %Active{1}
 		VarDict %Parameters{}
 		s %Prefab{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{13136374641920847791,5722945587587635490}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{3975628602980009892,5221704472846759266}}
+		}
+		s %GlobalKey{""}
+		Vec3 %LocalPosition{f{0,0,0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::Automatic"}
+		s %Name{""}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
 	}
 }
 o
@@ -167,6 +206,7 @@ o
 			Uuid{u4{10258994852426184018,10299915459560677696}}
 			Uuid{u4{13136223515022995085,5193605965675756176}}
 			Uuid{u4{11605386600209319615,4890179645831117397}}
+			Uuid{u4{13136374641920847791,5722945587587635490}}
 		}
 		Uuid %Settings{u4{12070020047104415032,10262165962651294762}}
 	}
@@ -470,6 +510,24 @@ Types
 {
 o
 {
+	Uuid %id{u4{13057104499276508420,89376261333548025}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{9147637384920600284,6814141910962389234}}
+			Uuid{u4{99016721013269061,11158704943236572928}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"Speed"}
+		s %Type{"float"}
+	}
+}
+o
+{
 	Uuid %id{u4{5052347763945628380,435550393878035160}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -543,12 +601,20 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Attributes
+		{
+			Uuid{u4{11028709821392331658,11451768006019511506}}
+		}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
 		s %PluginName{"FlyBirdPlugin"}
-		VarArray %Properties{}
+		VarArray %Properties
+		{
+			Uuid{u4{17261572236102582152,7138268454496383665}}
+			Uuid{u4{13057104499276508420,89376261333548025}}
+			Uuid{u4{16361785586358490346,14010990810765230986}}
+		}
 		s %TypeName{"FollowCameraComponent"}
 		u3 %TypeVersion{1}
 	}
@@ -674,6 +740,43 @@ o
 }
 o
 {
+	Uuid %id{u4{9147637384920600284,6814141910962389234}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Value{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{17261572236102582152,7138268454496383665}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{5710564656172593994,8687575993961476582}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"GlobalKey"}
+		s %Type{"xiiString"}
+	}
+}
+o
+{
+	Uuid %id{u4{5710564656172593994,8687575993961476582}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Value{""}
+	}
+}
+o
+{
 	Uuid %id{u4{4420644391346770952,8866878917676252084}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -725,6 +828,27 @@ o
 }
 o
 {
+	Uuid %id{u4{99016721013269061,11158704943236572928}}
+	s %t{"xiiClampValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Max{0x0000803F}
+		f %Min{0}
+	}
+}
+o
+{
+	Uuid %id{u4{11028709821392331658,11451768006019511506}}
+	s %t{"xiiCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"FlyBird"}
+	}
+}
+o
+{
 	Uuid %id{u4{6543640678001033675,11605026245766860954}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -772,6 +896,23 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiSceneLayerBase"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{16361785586358490346,14010990810765230986}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{5209175951243506981,18249510814038186240}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"PositionOffset"}
+		s %Type{"xiiVec3"}
 	}
 }
 o
@@ -891,6 +1032,16 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiReflectionProbeMode"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{5209175951243506981,18249510814038186240}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		Vec3 %Value{f{0,0,0}}
 	}
 }
 }
