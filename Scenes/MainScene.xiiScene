@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{806593404964044161}
+		u4 %Hash{4092329678225688775}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -97,7 +97,12 @@ o
 	p
 	{
 		b %Active{1}
+		f %DestroyDistance{0xCDCCC742}
+		s %GlobalKey{"Player"}
+		Vec2 %HeightRandomness{f{0x000070C2,0x00007042}}
 		i3 %ObstacleCount{10}
+		Vec2 %OffsetDistance{f{0x0000F041,0x00009642}}
+		f %Veclocity{0x0000803F}
 	}
 }
 o
@@ -1056,16 +1061,6 @@ o
 }
 o
 {
-	Uuid %id{u4{12246810386158184922,4539698570026152029}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		i3 %Value{10}
-	}
-}
-o
-{
 	Uuid %id{u4{7113270210448903041,4914649027248066584}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1123,24 +1118,6 @@ o
 	p
 	{
 		f %Value{0x0000803F}
-	}
-}
-o
-{
-	Uuid %id{u4{5774939554231685087,7106818433613664452}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{12246810386158184922,4539698570026152029}}
-			Uuid{u4{17837082262949047316,12161326879543259354}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"ObstacleCount"}
-		s %Type{"xiiInt32"}
 	}
 }
 o
@@ -1228,18 +1205,12 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes
-		{
-			Uuid{u4{14768695938081650029,12901276943334974941}}
-		}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
 		s %PluginName{"FlyBirdPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{5774939554231685087,7106818433613664452}}
-		}
+		VarArray %Properties{}
 		s %TypeName{"ObstacleManagerComponent"}
 		u3 %TypeVersion{1}
 	}
@@ -1284,17 +1255,6 @@ o
 }
 o
 {
-	Uuid %id{u4{17837082262949047316,12161326879543259354}}
-	s %t{"xiiClampValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		i3 %Max{20}
-		i3 %Min{1}
-	}
-}
-o
-{
 	Uuid %id{u4{1152577461141646064,12605678956562872998}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1308,16 +1268,6 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiCameraMode"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{14768695938081650029,12901276943334974941}}
-	s %t{"xiiCategoryAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Category{"FlyBird"}
 	}
 }
 o

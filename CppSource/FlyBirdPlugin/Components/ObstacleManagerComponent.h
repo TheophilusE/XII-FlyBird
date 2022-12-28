@@ -34,5 +34,19 @@ private:
 
   xiiInt32 m_iObstacleCount;
 
+  float m_fDestroyDistance;
+
+  xiiVec2 m_fOffsetDistance;
+
+  float m_fVeclocity;
+
+  xiiVec2 m_vHeightRandomness;
+
+  xiiString m_szGlobalKey;
+
+  xiiGameObjectHandle m_hTargetHandle;
+
   xiiDynamicArray<xiiGameObjectHandle> m_ObstacleHandles;
+
+  xiiRandom m_Random;
 };
