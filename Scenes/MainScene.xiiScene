@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{6758723665948957423}
+		u4 %Hash{5210287478495603152}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -33,7 +33,19 @@ o
 	p
 	{
 		b %Active{1}
-		VarArray %Children{}
+		VarArray %Children
+		{
+			Uuid{u4{5631515612298351765,4775876877021762142}}
+			Uuid{u4{11597123110539599951,9699808676806511845}}
+			Uuid{u4{8124308961432969770,9749137850997203758}}
+			Uuid{u4{7580276476770122044,10355315207742737089}}
+			Uuid{u4{14779773796155592510,9403665435187958771}}
+			Uuid{u4{3372395500289703497,9920332197424532984}}
+			Uuid{u4{4490047784934252838,9459465213551575089}}
+			Uuid{u4{14687710338197259555,9658772308506470188}}
+			Uuid{u4{14658684525001650245,10080215955155655266}}
+			Uuid{u4{7224755384591964964,10500111238674759678}}
+		}
 		VarArray %Components{}
 		s %GlobalKey{""}
 		Vec3 %LocalPosition{f{0,0,0}}
@@ -42,6 +54,32 @@ o
 		f %LocalUniformScaling{0x0000803F}
 		s %Mode{"xiiObjectMode::Automatic"}
 		s %Name{"Obstacles"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{5631515612298351765,4775876877021762142}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{11668345533018606466,4944949539485823230}}
+		}
+		s %GlobalKey{"Obstacle-0"}
+		Vec3 %LocalPosition{f{0,0,0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-0"}
 		VarArray %Tags
 		{
 			s{"CastShadow"}
@@ -86,6 +124,18 @@ o
 		s %GlobalKey{"Player"}
 		Vec3 %PositionOffset{f{0x000020C1,0x0000A0C1,0x00000040}}
 		f %Speed{0x9999993E}
+	}
+}
+o
+{
+	Uuid %id{u4{11668345533018606466,4944949539485823230}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
 	}
 }
 o
@@ -144,18 +194,6 @@ o
 }
 o
 {
-	Uuid %id{u4{3975628602980009892,5221704472846759266}}
-	s %t{"xiiPrefabReferenceComponent"}
-	u3 %v{4}
-	p
-	{
-		b %Active{1}
-		VarDict %Parameters{}
-		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
-	}
-}
-o
-{
 	Uuid %id{u4{5166425742529995429,5562399254696729571}}
 	s %t{"xiiPrefabReferenceComponent"}
 	u3 %v{4}
@@ -164,32 +202,6 @@ o
 		b %Active{1}
 		VarDict %Parameters{}
 		s %Prefab{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
-	}
-}
-o
-{
-	Uuid %id{u4{13136374641920847791,5722945587587635490}}
-	s %t{"xiiGameObject"}
-	u3 %v{1}
-	p
-	{
-		b %Active{1}
-		VarArray %Children{}
-		VarArray %Components
-		{
-			Uuid{u4{3975628602980009892,5221704472846759266}}
-		}
-		s %GlobalKey{""}
-		Vec3 %LocalPosition{f{0,0,0}}
-		Quat %LocalRotation{f{0,0,0,0x0000803F}}
-		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
-		f %LocalUniformScaling{0x0000803F}
-		s %Mode{"xiiObjectMode::Automatic"}
-		s %Name{""}
-		VarArray %Tags
-		{
-			s{"CastShadow"}
-		}
 	}
 }
 o
@@ -206,9 +218,224 @@ o
 			Uuid{u4{10258994852426184018,10299915459560677696}}
 			Uuid{u4{13136223515022995085,5193605965675756176}}
 			Uuid{u4{11605386600209319615,4890179645831117397}}
-			Uuid{u4{13136374641920847791,5722945587587635490}}
 		}
 		Uuid %Settings{u4{12070020047104415032,10262165962651294762}}
+	}
+}
+o
+{
+	Uuid %id{u4{14779773796155592510,9403665435187958771}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{2369859643166295595,9572738097652019859}}
+		}
+		s %GlobalKey{"Obstacle-4"}
+		Vec3 %LocalPosition{f{0x7B14F2C2,0,0xA4701DC0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-4"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{4490047784934252838,9459465213551575089}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{10526877705654507539,9628537876015636177}}
+		}
+		s %GlobalKey{"Obstacle-6"}
+		Vec3 %LocalPosition{f{0xAE4733C3,0,0xF628BC3F}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-6"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{2369859643166295595,9572738097652019859}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{10526877705654507539,9628537876015636177}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{14687710338197259555,9658772308506470188}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{2277796185207962640,9827844970970531276}}
+		}
+		s %GlobalKey{"Obstacle-7"}
+		Vec3 %LocalPosition{f{0xB81E53C3,0,0x52B83EC0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-7"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{11597123110539599951,9699808676806511845}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{17633953031259854652,9868881339270572933}}
+		}
+		s %GlobalKey{"Obstacle-1"}
+		Vec3 %LocalPosition{f{0x52B8E0C1,0,0x52B8BE3F}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-1"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{8124308961432969770,9749137850997203758}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{14161138882153224471,9918210513461264846}}
+		}
+		s %GlobalKey{"Obstacle-2"}
+		Vec3 %LocalPosition{f{0x9A9974C2,0,0x48E14A40}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-2"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{2277796185207962640,9827844970970531276}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{17633953031259854652,9868881339270572933}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{14161138882153224471,9918210513461264846}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{3372395500289703497,9920332197424532984}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{9409225421009958198,10089404859888594072}}
+		}
+		s %GlobalKey{"Obstacle-5"}
+		Vec3 %LocalPosition{f{0xF62815C3,0,0xCDCCCC3E}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-5"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
 	}
 }
 o
@@ -274,6 +501,44 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{14658684525001650245,10080215955155655266}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{2248770372012353330,10249288617619716354}}
+		}
+		s %GlobalKey{"Obstacle-8"}
+		Vec3 %LocalPosition{f{0x1FC56EC3,0,0xD7A330BF}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-8"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{9409225421009958198,10089404859888594072}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
 	}
 }
 o
@@ -346,6 +611,18 @@ o
 }
 o
 {
+	Uuid %id{u4{2248770372012353330,10249288617619716354}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
 	Uuid %id{u4{12070020047104415032,10262165962651294762}}
 	s %t{"xiiSceneDocumentSettings"}
 	u3 %v{2}
@@ -377,6 +654,32 @@ o
 		f %LocalUniformScaling{0x0000803F}
 		s %Mode{"xiiObjectMode::Automatic"}
 		s %Name{"Geometry"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{7580276476770122044,10355315207742737089}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{13617106397490376745,10524387870206798177}}
+		}
+		s %GlobalKey{"Obstacle-3"}
+		Vec3 %LocalPosition{f{0x29DCBEC2,0,0x48E1DABF}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-3"}
 		VarArray %Tags
 		{
 			s{"CastShadow"}
@@ -439,6 +742,44 @@ o
 }
 o
 {
+	Uuid %id{u4{7224755384591964964,10500111238674759678}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{13261585305312219665,10669183901138820766}}
+		}
+		s %GlobalKey{"Obstacle-9"}
+		Vec3 %LocalPosition{f{0xC37586C3,0,0xEC51983F}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"Obstacle-9"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{13617106397490376745,10524387870206798177}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+	}
+}
+o
+{
 	Uuid %id{u4{1031827849923282728,10545914423338157845}}
 	s %t{"xiiSphereReflectionProbeComponent"}
 	u3 %v{2}
@@ -482,6 +823,18 @@ o
 		f %Saturation{0x0000803F}
 		b %ShowDebugInfo{0}
 		b %ShowMipMaps{0}
+	}
+}
+o
+{
+	Uuid %id{u4{13261585305312219665,10669183901138820766}}
+	s %t{"xiiPrefabReferenceComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
 	}
 }
 o
