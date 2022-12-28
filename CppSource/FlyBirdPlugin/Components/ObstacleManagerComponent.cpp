@@ -32,6 +32,30 @@ void ObstacleManagerComponent::OnSimulationStarted()
   SUPER::OnSimulationStarted();
 
   // Retrieve obstacle handles
+  m_ObstacleHandles.Reserve(m_iObstacleCount);
+
+  xiiStringBuilder sName;
+  xiiUInt16        uiLoadedObstacles = 0;
+
+  for (xiiUInt32 i = 0; i < m_iObstacleCount; ++i)
+  {
+    sName.Format("Obstacle-{0}", i);
+
+    xiiLog::Info(sName);
+
+    xiiGameObject* pObject = nullptr;
+    if (GetWorld()->TryGetObjectWithGlobalKey(sName.GetView(), pObject))
+    {
+      m_ObstacleHandles.PushBack(pObject->GetHandle());
+      ++uiLoadedObstacles;
+    }
+    else
+    {
+      xiiLog::Error("Failed to retrieve obstacle with global key {0}", i);
+    }
+  }
+
+  m_ObstacleHandles.SetCount(uiLoadedObstacles);
 }
 
 void ObstacleManagerComponent::Update()

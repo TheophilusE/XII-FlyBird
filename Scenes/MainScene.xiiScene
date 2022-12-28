@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{5210287478495603152}
+		u4 %Hash{806593404964044161}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -46,7 +46,10 @@ o
 			Uuid{u4{14658684525001650245,10080215955155655266}}
 			Uuid{u4{7224755384591964964,10500111238674759678}}
 		}
-		VarArray %Components{}
+		VarArray %Components
+		{
+			Uuid{u4{11276616722939003572,4843661409950048984}}
+		}
 		s %GlobalKey{""}
 		Vec3 %LocalPosition{f{0,0,0}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
@@ -84,6 +87,17 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{11276616722939003572,4843661409950048984}}
+	s %t{"ObstacleManagerComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		i3 %ObstacleCount{10}
 	}
 }
 o
@@ -1042,6 +1056,16 @@ o
 }
 o
 {
+	Uuid %id{u4{12246810386158184922,4539698570026152029}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Value{10}
+	}
+}
+o
+{
 	Uuid %id{u4{7113270210448903041,4914649027248066584}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1099,6 +1123,24 @@ o
 	p
 	{
 		f %Value{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{5774939554231685087,7106818433613664452}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{12246810386158184922,4539698570026152029}}
+			Uuid{u4{17837082262949047316,12161326879543259354}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"ObstacleCount"}
+		s %Type{"xiiInt32"}
 	}
 }
 o
@@ -1181,6 +1223,29 @@ o
 }
 o
 {
+	Uuid %id{u4{4344966334520232096,10664813090317280911}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{14768695938081650029,12901276943334974941}}
+		}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties
+		{
+			Uuid{u4{5774939554231685087,7106818433613664452}}
+		}
+		s %TypeName{"ObstacleManagerComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
 	Uuid %id{u4{99016721013269061,11158704943236572928}}
 	s %t{"xiiClampValueAttribute"}
 	u3 %v{1}
@@ -1219,6 +1284,17 @@ o
 }
 o
 {
+	Uuid %id{u4{17837082262949047316,12161326879543259354}}
+	s %t{"xiiClampValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Max{20}
+		i3 %Min{1}
+	}
+}
+o
+{
 	Uuid %id{u4{1152577461141646064,12605678956562872998}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1232,6 +1308,16 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiCameraMode"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{14768695938081650029,12901276943334974941}}
+	s %t{"xiiCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"FlyBird"}
 	}
 }
 o
