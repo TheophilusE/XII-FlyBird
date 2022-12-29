@@ -74,9 +74,6 @@ void ObstacleManagerComponent::OnSimulationStarted()
   }
 
   m_ObstacleHandles.SetCount(uiLoadedObstacles);
-
-  // Initialize RNG
-  m_Random.Initialize(0xFFA78df);
 }
 
 void ObstacleManagerComponent::Update()
@@ -100,15 +97,11 @@ void ObstacleManagerComponent::Update()
     {
       xiiVec3 objectPosition = pObject->GetGlobalPosition();
 
-      // Move obstacle horizontally
-      pObject->SetGlobalPosition(objectPosition + xiiVec3(m_fVeclocity, 0, 0));
-
-      if (xiiMath::Abs(targetPosition.x - objectPosition.x) > m_fDestroyDistance)
+      // Compute new position
+      if (objectPosition.x < targetPosition.x - m_fDestroyDistance)
       {
-        // Compute new position
-
         // Retrieve the position of the farthest object in front of the player
-        xiiVec3 newPosition;
+        xiiVec3 farthestObjectPosition;
         {
           xiiGameObject* pLastObject = nullptr;
           if (!GetWorld()->TryGetObject(m_ObstacleHandles[m_ObstacleHandles.GetCount() - 1], pLastObject))
@@ -118,17 +111,17 @@ void ObstacleManagerComponent::Update()
             return;
           }
 
-          newPosition.x = pLastObject->GetGlobalPosition().x;
+          farthestObjectPosition = pLastObject->GetGlobalPosition();
         }
 
-        // Offset the obstacle position to recycle obstacle object. Note that the player themselves are not moving.
-        newPosition.x += m_Random.FloatInRange(m_fOffsetDistance.x, m_fOffsetDistance.y);
+        // Offset the obstacle position to recycle obstacle object.
+        objectPosition.x = farthestObjectPosition.x + (GetWorld()->GetRandomNumberGenerator().FloatInRange(m_fOffsetDistance.x, m_fOffsetDistance.y) * (i + 1));
 
         // Randomize the height of the object.
-        newPosition.z = m_Random.FloatMinMax(m_vHeightRandomness.x, m_vHeightRandomness.y);
+        objectPosition.z = GetWorld()->GetRandomNumberGenerator().FloatMinMax(m_vHeightRandomness.x, m_vHeightRandomness.y);
 
         // Update object position
-        pObject->SetGlobalPosition(newPosition);
+        pObject->SetGlobalPosition(objectPosition);
       }
     }
     else

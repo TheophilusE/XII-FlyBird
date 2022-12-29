@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{4092329678225688775}
+		u4 %Hash{2604213364920019038}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -32,7 +32,7 @@ o
 	u3 %v{1}
 	p
 	{
-		b %Active{1}
+		b %Active{0}
 		VarArray %Children
 		{
 			Uuid{u4{5631515612298351765,4775876877021762142}}
@@ -99,9 +99,9 @@ o
 		b %Active{1}
 		f %DestroyDistance{0xCDCCC742}
 		s %GlobalKey{"Player"}
-		Vec2 %HeightRandomness{f{0x000070C2,0x00007042}}
+		Vec2 %HeightRandomness{f{0x0000A0C1,0x0000A041}}
 		i3 %ObstacleCount{10}
-		Vec2 %OffsetDistance{f{0x0000F041,0x00009642}}
+		Vec2 %OffsetDistance{f{0x00000C42,0x00000C42}}
 		f %Veclocity{0x0000803F}
 	}
 }
@@ -120,8 +120,8 @@ o
 			Uuid{u4{8529480481071115958,4938440349921275162}}
 		}
 		s %GlobalKey{""}
-		Vec3 %LocalPosition{f{0x0000E0BF,0x000090C1,0x00000040}}
-		Quat %LocalRotation{f{0,0,0xF304353F,0xF304353F}}
+		Vec3 %LocalPosition{f{0x0000DC42,0x0000A041,0x00000040}}
+		Quat %LocalRotation{f{0,0,0xF30435BF,0xF304353F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
 		s %Mode{"xiiObjectMode::ForceDynamic"}
@@ -141,7 +141,7 @@ o
 	{
 		b %Active{1}
 		s %GlobalKey{"Player"}
-		Vec3 %PositionOffset{f{0x000020C1,0x0000A0C1,0x00000040}}
+		Vec3 %PositionOffset{f{0x00002041,0x0000A041,0x00000040}}
 		f %Speed{0x9999993E}
 	}
 }
@@ -171,7 +171,7 @@ o
 		i1 %EditorShortcut{-1}
 		VarArray %ExcludeTags{}
 		f %ExposureCompensation{0}
-		f %FOV{0x00007042}
+		f %FOV{0x0000B442}
 		f %FarPlane{0x0000C842}
 		f %ISO{0x0000C842}
 		VarArray %IncludeTags{}
@@ -199,8 +199,8 @@ o
 			Uuid{u4{5166425742529995429,5562399254696729571}}
 		}
 		s %GlobalKey{""}
-		Vec3 %LocalPosition{f{0,0,0}}
-		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalPosition{f{0x0000C842,0,0}}
+		Quat %LocalRotation{f{0,0,0x0000803F,0x2EBD3BB3}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
 		s %Mode{"xiiObjectMode::ForceDynamic"}
@@ -213,6 +213,24 @@ o
 }
 o
 {
+	Uuid %id{u4{4578775442014978230,5383634964469725817}}
+	s %t{"xiiSpawnComponent"}
+	u3 %v{3}
+	p
+	{
+		b %Active{1}
+		b %AttachAsChild{0}
+		Time %DelayRange{d{0x0000000000000840}}
+		Angle %Deviation{f{0}}
+		Time %MinDelay{d{0x000000000000F03F}}
+		VarDict %Parameters{}
+		s %Prefab{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
+		b %SpawnAtStart{1}
+		b %SpawnContinuously{1}
+	}
+}
+o
+{
 	Uuid %id{u4{5166425742529995429,5562399254696729571}}
 	s %t{"xiiPrefabReferenceComponent"}
 	u3 %v{4}
@@ -221,6 +239,32 @@ o
 		b %Active{1}
 		VarDict %Parameters{}
 		s %Prefab{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{11855513416828190138,5610255074412585747}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{4578775442014978230,5383634964469725817}}
+		}
+		s %GlobalKey{""}
+		Vec3 %LocalPosition{f{0x00004843,0,0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::Automatic"}
+		s %Name{"Obstacle Spawner"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
 	}
 }
 o
@@ -255,7 +299,7 @@ o
 			Uuid{u4{2369859643166295595,9572738097652019859}}
 		}
 		s %GlobalKey{"Obstacle-4"}
-		Vec3 %LocalPosition{f{0x7B14F2C2,0,0xA4701DC0}}
+		Vec3 %LocalPosition{f{0x0000F242,0,0xA4701DC0}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -281,7 +325,7 @@ o
 			Uuid{u4{10526877705654507539,9628537876015636177}}
 		}
 		s %GlobalKey{"Obstacle-6"}
-		Vec3 %LocalPosition{f{0xAE4733C3,0,0xF628BC3F}}
+		Vec3 %LocalPosition{f{0x00003343,0,0xF628BC3F}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -331,7 +375,7 @@ o
 			Uuid{u4{2277796185207962640,9827844970970531276}}
 		}
 		s %GlobalKey{"Obstacle-7"}
-		Vec3 %LocalPosition{f{0xB81E53C3,0,0x52B83EC0}}
+		Vec3 %LocalPosition{f{0x00005343,0,0x52B83EC0}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -357,7 +401,7 @@ o
 			Uuid{u4{17633953031259854652,9868881339270572933}}
 		}
 		s %GlobalKey{"Obstacle-1"}
-		Vec3 %LocalPosition{f{0x52B8E0C1,0,0x52B8BE3F}}
+		Vec3 %LocalPosition{f{0x0000E041,0,0x52B8BE3F}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -383,7 +427,7 @@ o
 			Uuid{u4{14161138882153224471,9918210513461264846}}
 		}
 		s %GlobalKey{"Obstacle-2"}
-		Vec3 %LocalPosition{f{0x9A9974C2,0,0x48E14A40}}
+		Vec3 %LocalPosition{f{0x00007442,0,0x48E14A40}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -445,7 +489,7 @@ o
 			Uuid{u4{9409225421009958198,10089404859888594072}}
 		}
 		s %GlobalKey{"Obstacle-5"}
-		Vec3 %LocalPosition{f{0xF62815C3,0,0xCDCCCC3E}}
+		Vec3 %LocalPosition{f{0x00001543,0,0xCDCCCC3E}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -536,7 +580,7 @@ o
 			Uuid{u4{2248770372012353330,10249288617619716354}}
 		}
 		s %GlobalKey{"Obstacle-8"}
-		Vec3 %LocalPosition{f{0x1FC56EC3,0,0xD7A330BF}}
+		Vec3 %LocalPosition{f{0x00006E43,0,0xD7A330BF}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -664,6 +708,7 @@ o
 		VarArray %Children
 		{
 			Uuid{u4{6015650855697800577,4708419679926486352}}
+			Uuid{u4{11855513416828190138,5610255074412585747}}
 		}
 		VarArray %Components{}
 		s %GlobalKey{""}
@@ -693,7 +738,7 @@ o
 			Uuid{u4{13617106397490376745,10524387870206798177}}
 		}
 		s %GlobalKey{"Obstacle-3"}
-		Vec3 %LocalPosition{f{0x29DCBEC2,0,0x48E1DABF}}
+		Vec3 %LocalPosition{f{0x0000BE42,0,0x48E1DABF}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -773,7 +818,7 @@ o
 			Uuid{u4{13261585305312219665,10669183901138820766}}
 		}
 		s %GlobalKey{"Obstacle-9"}
-		Vec3 %LocalPosition{f{0xC37586C3,0,0xEC51983F}}
+		Vec3 %LocalPosition{f{0x00008643,0,0xEC51983F}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
 		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
 		f %LocalUniformScaling{0x0000803F}
@@ -900,6 +945,26 @@ o
 }
 o
 {
+	Uuid %id{u4{6500115973181183114,144055063584763270}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		Vec2 %Value{f{0x0000F041,0x00009642}}
+	}
+}
+o
+{
+	Uuid %id{u4{15484416343476518842,384700726301427631}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Value{10}
+	}
+}
+o
+{
 	Uuid %id{u4{5052347763945628380,435550393878035160}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -947,6 +1012,23 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiEnumBase"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13567872209078923000,1922474374117756679}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiSpawnComponent"}
+		u3 %TypeVersion{3}
 	}
 }
 o
@@ -1044,6 +1126,16 @@ o
 }
 o
 {
+	Uuid %id{u4{16503106063749857190,4044635581309731617}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Value{0x0000C842}
+	}
+}
+o
+{
 	Uuid %id{u4{1796644311269689278,4463992859044556795}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1057,6 +1149,16 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiPrefabReferenceComponent"}
 		u3 %TypeVersion{4}
+	}
+}
+o
+{
+	Uuid %id{u4{12246810386158184922,4539698570026152029}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Value{""}
 	}
 }
 o
@@ -1095,6 +1197,23 @@ o
 }
 o
 {
+	Uuid %id{u4{12558005596915901828,5804639392844978476}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{16503106063749857190,4044635581309731617}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"DestroyDistance"}
+		s %Type{"float"}
+	}
+}
+o
+{
 	Uuid %id{u4{17137289953408618306,6680036317484412198}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1122,6 +1241,23 @@ o
 }
 o
 {
+	Uuid %id{u4{5774939554231685087,7106818433613664452}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{12246810386158184922,4539698570026152029}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"GlobalKey"}
+		s %Type{"xiiString"}
+	}
+}
+o
+{
 	Uuid %id{u4{17261572236102582152,7138268454496383665}}
 	s %t{"xiiReflectedPropertyDescriptor"}
 	u3 %v{2}
@@ -1135,6 +1271,24 @@ o
 		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
 		s %Name{"GlobalKey"}
 		s %Type{"xiiString"}
+	}
+}
+o
+{
+	Uuid %id{u4{12355718193405423537,8687404967165752040}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{15484416343476518842,384700726301427631}}
+			Uuid{u4{14930896382374188464,12207395166094955049}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"ObstacleCount"}
+		s %Type{"xiiInt32"}
 	}
 }
 o
@@ -1162,6 +1316,40 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiSceneDocumentSettingsBase"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{8335300529294571676,9611185932096291942}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{16857713137662901903,12839441360297459569}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"Veclocity"}
+		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{8319302345885036078,9945857071758054893}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{6500115973181183114,144055063584763270}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"OffsetDistance"}
+		s %Type{"xiiVec2"}
 	}
 }
 o
@@ -1200,17 +1388,38 @@ o
 }
 o
 {
+	Uuid %id{u4{10044477619252397103,10399719054433467616}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		Vec2 %Value{f{0x000070C2,0x00007042}}
+	}
+}
+o
+{
 	Uuid %id{u4{4344966334520232096,10664813090317280911}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Attributes
+		{
+			Uuid{u4{14768695938081650029,12901276943334974941}}
+		}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
 		s %PluginName{"FlyBirdPlugin"}
-		VarArray %Properties{}
+		VarArray %Properties
+		{
+			Uuid{u4{5774939554231685087,7106818433613664452}}
+			Uuid{u4{12355718193405423537,8687404967165752040}}
+			Uuid{u4{8319302345885036078,9945857071758054893}}
+			Uuid{u4{10762866576782517941,11502991804167140774}}
+			Uuid{u4{8335300529294571676,9611185932096291942}}
+			Uuid{u4{12558005596915901828,5804639392844978476}}
+		}
 		s %TypeName{"ObstacleManagerComponent"}
 		u3 %TypeVersion{1}
 	}
@@ -1238,6 +1447,23 @@ o
 }
 o
 {
+	Uuid %id{u4{10762866576782517941,11502991804167140774}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{10044477619252397103,10399719054433467616}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"HeightRandomness"}
+		s %Type{"xiiVec2"}
+	}
+}
+o
+{
 	Uuid %id{u4{6543640678001033675,11605026245766860954}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1255,6 +1481,17 @@ o
 }
 o
 {
+	Uuid %id{u4{14930896382374188464,12207395166094955049}}
+	s %t{"xiiClampValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Max{20}
+		i3 %Min{1}
+	}
+}
+o
+{
 	Uuid %id{u4{1152577461141646064,12605678956562872998}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1268,6 +1505,26 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiCameraMode"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{16857713137662901903,12839441360297459569}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Value{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{14768695938081650029,12901276943334974941}}
+	s %t{"xiiCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"FlyBird"}
 	}
 }
 o

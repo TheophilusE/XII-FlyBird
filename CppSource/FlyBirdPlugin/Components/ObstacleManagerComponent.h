@@ -47,6 +47,4 @@ private:
   xiiGameObjectHandle m_hTargetHandle;
 
   xiiDynamicArray<xiiGameObjectHandle> m_ObstacleHandles;
-
-  xiiRandom m_Random;
 };

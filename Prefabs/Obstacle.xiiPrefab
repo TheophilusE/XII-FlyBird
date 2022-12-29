@@ -21,7 +21,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{14353708220123666328,5262473045461946578}}
-		u4 %Hash{12095386683547416493}
+		u4 %Hash{14009299957326433204}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{3337417960680536313,1431945298960240645}}
@@ -116,7 +116,10 @@ o
 			Uuid{u4{7572097630654573739,4701900884062315676}}
 			Uuid{u4{8551163795570477475,4792867190577782543}}
 		}
-		VarArray %Components{}
+		VarArray %Components
+		{
+			Uuid{u4{9870630229781642151,5288569074468655842}}
+		}
 		s %GlobalKey{""}
 		Vec3 %LocalPosition{f{0,0,0}}
 		Quat %LocalRotation{f{0,0,0,0x0000803F}}
@@ -252,6 +255,18 @@ o
 		b %Active{1}
 		u1 %CollisionLayer{2}
 		s %TriggerMessage{"Obstacle"}
+	}
+}
+o
+{
+	Uuid %id{u4{9870630229781642151,5288569074468655842}}
+	s %t{"ObstacleComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		Vec2 %RandomHeightRange{f{0x0000A0C1,0x0000A041}}
+		f %Speed{0x0000803F}
 	}
 }
 o
@@ -684,6 +699,23 @@ o
 		s %Property4{""}
 		s %Property5{""}
 		f %SizeScale{0x00000040}
+	}
+}
+o
+{
+	Uuid %id{u4{7391802934241661082,8359190677717088200}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
+		s %TypeName{"ObstacleComponent"}
+		u3 %TypeVersion{1}
 	}
 }
 o
