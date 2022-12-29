@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{16401405955223110763}
+		u4 %Hash{8301026003886828307}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -25,6 +25,53 @@ o
 }
 Objects
 {
+o
+{
+	Uuid %id{u4{4383689888978675110,4673971531147192498}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{1110290607101875391,4676419000811514781}}
+		}
+		s %GlobalKey{""}
+		Vec3 %LocalPosition{f{0,0,0}}
+		Quat %LocalRotation{f{0,0x0000003F,0,0xD7B35D3F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::Automatic"}
+		s %Name{"DirectionalLight"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
+	}
+}
+o
+{
+	Uuid %id{u4{1110290607101875391,4676419000811514781}}
+	s %t{"xiiDirectionalLightComponent"}
+	u3 %v{3}
+	p
+	{
+		b %Active{1}
+		b %CastShadows{0}
+		f %ConstantBias{0xCDCCCC3D}
+		f %FadeOutStart{0xCDCC4C3F}
+		f %Intensity{0x00002041}
+		ColorGamma %LightColor{u1{255,255,255,255}}
+		f %MinShadowRange{0x0000F041}
+		f %NearPlaneOffset{0x0000C842}
+		u3 %NumCascades{2}
+		f %PenumbraSize{0xCDCCCC3D}
+		f %SlopeBias{0x0000803E}
+		f %SplitModeWeight{0x3333333F}
+	}
+}
 o
 {
 	Uuid %id{u4{6015650855697800577,4708419679926486352}}
@@ -551,6 +598,7 @@ o
 			Uuid{u4{4639638142919444766,10455824885057673669}}
 			Uuid{u4{12450582761939518496,10155596493653099622}}
 			Uuid{u4{3714859253069427020,9990261604905861383}}
+			Uuid{u4{4383689888978675110,4673971531147192498}}
 		}
 		VarArray %Components{}
 		s %GlobalKey{""}
