@@ -6,15 +6,25 @@
 #include <FlyBirdPlugin/GameState/FlyBirdGameState.h>
 #include <Foundation/Configuration/CVar.h>
 #include <Foundation/Logging/Log.h>
+#include <JoltPlugin/Actors/JoltDynamicActorComponent.h>
 #include <RendererCore/Debug/DebugRenderer.h>
 #include <RendererCore/Meshes/MeshComponent.h>
 
+/// CVars
+
 xiiCVarBool cvar_DebugDisplay("FlyBird.DebugDisplay", false, xiiCVarFlags::Default, "Whether the game should display debug geometry.");
+
+xiiCVarBool cvar_PlayerAlive("FlyBird.PlayerAlive", true, xiiCVarFlags::Default, "Whether player is still alive");
+
+xiiCVarInt cvar_PlayerScore("FlyBird.PlayerScore", 0, xiiCVarFlags::Save, "The player's current score.");
+
+xiiCVarFloat cvar_PlayerJumpImpulse("FlyBird.JumpImpulse", 150.0f, xiiCVarFlags::Default, "The player's jump impulse");
+
 
 XII_BEGIN_DYNAMIC_REFLECTED_TYPE(FlyBirdGameState, 1, xiiRTTIDefaultAllocator<FlyBirdGameState>)
 XII_END_DYNAMIC_REFLECTED_TYPE;
 
-FlyBirdGameState::FlyBirdGameState() = default;
+FlyBirdGameState::FlyBirdGameState()  = default;
 FlyBirdGameState::~FlyBirdGameState() = default;
 
 void FlyBirdGameState::OnActivation(xiiWorld* pWorld, const xiiTransform* pStartPosition)
@@ -40,8 +50,22 @@ void FlyBirdGameState::AfterWorldUpdate()
     xiiDebugRenderer::DrawLineSphere(m_pMainWorld, xiiBoundingSphere(xiiVec3::ZeroVector(), 1.0f), xiiColor::Orange);
   }
 
-  xiiDebugRenderer::Draw2DText(m_pMainWorld, "Press 'O' to spawn objects", xiiVec2I32(10, 10), xiiColor::White);
-  xiiDebugRenderer::Draw2DText(m_pMainWorld, "Press 'P' to remove objects", xiiVec2I32(10, 30), xiiColor::White);
+  // Draw controls
+  xiiDebugRenderer::Draw2DText(m_pMainWorld, "Press 'Space' to fly", xiiVec2I32(10, 10), xiiColor::White);
+
+  // Draw player score
+  xiiStringBuilder sData;
+
+  if (cvar_PlayerAlive)
+  {
+    sData.Format("Score: {0}", cvar_PlayerScore);
+    xiiDebugRenderer::DrawInfoText(m_pMainWorld, xiiDebugRenderer::ScreenPlacement::TopCenter, "", sData.GetData(), xiiColor::GreenYellow);
+  }
+  else
+  {
+    sData.Format("Game Over. Final Score: {0}", cvar_PlayerScore);
+    xiiDebugRenderer::DrawInfoText(m_pMainWorld, xiiDebugRenderer::ScreenPlacement::TopCenter, "", sData.GetData(), xiiColor::GreenYellow);
+  }
 }
 
 void FlyBirdGameState::BeforeWorldUpdate()
@@ -58,13 +82,13 @@ void FlyBirdGameState::ConfigureMainWindowInputDevices(xiiWindow* pWindow)
 {
   SUPER::ConfigureMainWindowInputDevices(pWindow);
 
-  // setup devices here
+  // Setup devices here
 }
 
 static void RegisterInputAction(const char* szInputSet, const char* szInputAction, const char* szKey1, const char* szKey2 = nullptr, const char* szKey3 = nullptr)
 {
   xiiInputActionConfig cfg;
-  cfg.m_bApplyTimeScaling = true;
+  cfg.m_bApplyTimeScaling    = true;
   cfg.m_sInputSlotTrigger[0] = szKey1;
   cfg.m_sInputSlotTrigger[1] = szKey2;
   cfg.m_sInputSlotTrigger[2] = szKey3;
@@ -76,8 +100,7 @@ void FlyBirdGameState::ConfigureInputActions()
 {
   SUPER::ConfigureInputActions();
 
-  RegisterInputAction("FlyBirdPlugin", "SpawnObject", xiiInputSlot_KeyO, xiiInputSlot_Controller0_ButtonA, xiiInputSlot_MouseButton2);
-  RegisterInputAction("FlyBirdPlugin", "DeleteObject", xiiInputSlot_KeyP, xiiInputSlot_Controller0_ButtonB);
+  RegisterInputAction("FlyBirdPlugin", "Fly", xiiInputSlot_KeySpace, xiiInputSlot_Controller0_ButtonA, xiiInputSlot_MouseButton2);
 }
 
 void FlyBirdGameState::ProcessInput()
@@ -86,66 +109,21 @@ void FlyBirdGameState::ProcessInput()
 
   xiiWorld* pWorld = m_pMainWorld;
 
-  if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "SpawnObject") == xiiKeyState::Pressed)
+  // Retrieve player object
+  xiiGameObject* pPlayerObject = nullptr;
+  if (!pWorld->TryGetObjectWithGlobalKey("Player", pPlayerObject))
   {
-    const xiiVec3 pos = GetMainCamera()->GetCenterPosition() + GetMainCamera()->GetCenterDirForwards();
-
-    // make sure we are allowed to modify the world
-    XII_LOCK(pWorld->GetWriteMarker());
-
-    // create a game object at the desired position
-    xiiGameObjectDesc desc;
-    desc.m_LocalPosition = pos;
-
-    xiiGameObject* pObject = nullptr;
-    xiiGameObjectHandle hObject = pWorld->CreateObject(desc, pObject);
-
-    m_SpawnedObjects.PushBack(hObject);
-
-    // attach a mesh component to the object
-    xiiMeshComponent* pMesh;
-    pWorld->GetOrCreateComponentManager<xiiMeshComponentManager>()->CreateComponent(pObject, pMesh);
-
-    // Set the mesh to use.
-    // Here we use a path relative to the project directory.
-    // We have to reference the 'transformed' file, not the source file.
-    // This would break if the source asset is moved or renamed.
-    pMesh->SetMeshFile("AssetCache/Common/Meshes/Sphere.xiiMesh");
-
-    // here we use the asset GUID to reference the transformed asset
-    // we can copy the GUID from the asset browser
-    // the GUID is stable even if the source asset gets moved or renamed
-    // using asset collections we could also give a nice name like 'Blue Material' to this asset
-    xiiMaterialResourceHandle hMaterial = xiiResourceManager::LoadResource<xiiMaterialResource>("{ aa1c5601-bc43-fbf8-4e07-6a3df3af51e7 }");
-
-    // override the mesh material in the first slot with something different
-    pMesh->SetMaterial(0, hMaterial);
+    xiiLog::Error("Failed to retrieve player object with key '{0}'", "Player");
+    return;
   }
 
-  if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "DeleteObject") == xiiKeyState::Pressed)
+  if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "Fly") == xiiKeyState::Down)
   {
-    if (!m_SpawnedObjects.IsEmpty())
-    {
-      // make sure we are allowed to modify the world
-      XII_LOCK(pWorld->GetWriteMarker());
+    xiiJoltDynamicActorComponent* pDynamicActor = nullptr;
+    pPlayerObject->TryGetComponentOfBaseType(pDynamicActor);
 
-      xiiGameObjectHandle hObject = m_SpawnedObjects.PeekBack();
-      m_SpawnedObjects.PopBack();
-
-      // this is only for demonstration purposes, removing the object will delete all attached components as well
-      xiiGameObject* pObject = nullptr;
-      if (pWorld->TryGetObject(hObject, pObject))
-      {
-        xiiMeshComponent* pMesh = nullptr;
-        if (pObject->TryGetComponentOfBaseType(pMesh))
-        {
-          pMesh->DeleteComponent();
-        }
-      }
-
-      // delete the object, all its children and attached components
-      pWorld->DeleteObjectDelayed(hObject);
-    }
+    // Apply upward impulse
+    pDynamicActor->AddLinearImpulse(xiiVec3(0, 0, cvar_PlayerJumpImpulse * pWorld->GetClock().GetTimeDiff().AsFloatInSeconds()));
   }
 }
 

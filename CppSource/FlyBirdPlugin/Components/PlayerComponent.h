@@ -5,11 +5,11 @@
 #include <Core/World/World.h>
 #include <FlyBirdPlugin/FlyBirdPluginDLL.h>
 
-using ObstacleComponentManager = xiiComponentManagerSimple<class ObstacleComponent, xiiComponentUpdateType::WhenSimulating>;
+using PlayerComponentManager = xiiComponentManagerSimple<class PlayerComponent, xiiComponentUpdateType::WhenSimulating>;
 
-class ObstacleComponent : public xiiComponent
+class PlayerComponent : public xiiComponent
 {
-  XII_DECLARE_COMPONENT_TYPE(ObstacleComponent, xiiComponent, ObstacleComponentManager);
+  XII_DECLARE_COMPONENT_TYPE(PlayerComponent, xiiComponent, PlayerComponentManager);
 
   //////////////////////////////////////////////////////////////////////////
   // xiiComponent
@@ -22,17 +22,13 @@ protected:
   virtual void OnSimulationStarted() override;
 
   //////////////////////////////////////////////////////////////////////////
-  // ObstacleComponent
+  // PlayerComponent
 
 public:
-  ObstacleComponent();
-  ~ObstacleComponent();
+  PlayerComponent();
+  ~PlayerComponent();
 
 private:
 
   void Update();
-
-  float m_fSpeed = 1.0f;
-
-  xiiVec2 m_vRandomHeightRange;
 };

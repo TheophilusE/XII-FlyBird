@@ -29,6 +29,4 @@ private:
   virtual void OnDeactivation() override;
   virtual void BeforeWorldUpdate() override;
   virtual void AfterWorldUpdate() override;
-
-  xiiDeque<xiiGameObjectHandle> m_SpawnedObjects;
 };

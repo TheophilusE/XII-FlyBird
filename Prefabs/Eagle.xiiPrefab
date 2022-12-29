@@ -11,7 +11,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{7384169306099483801,4659820462203987710}}
-		u4 %Hash{4477152212844282926}
+		u4 %Hash{8766847483241112580}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{5965072728646065637,17953005490508715990}}
@@ -195,10 +195,10 @@ o
 		b %ContinuousCollisionDetection{1}
 		b %CustomCenterOfMass{0}
 		f %Density{0x0000C842}
-		f %GravityFactor{0}
+		f %GravityFactor{0x0000803F}
 		b %Kinematic{0}
 		f %LinearDamping{0xCDCC4C3E}
-		f %Mass{0x6666D640}
+		f %Mass{0x0000803F}
 		s %OnContact{""}
 		b %StartAsleep{0}
 		s %Surface{""}
@@ -272,27 +272,6 @@ Types
 {
 o
 {
-	Uuid %id{u4{11383102437802408404,158012747530598139}}
-	s %t{"xiiReflectedFunctionDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Arguments
-		{
-			Uuid{u4{1806336801447951491,12423625255756299695}}
-		}
-		VarArray %Attributes
-		{
-			Uuid{u4{14998615817151926124,13483782274229131212}}
-		}
-		s %Flags{"xiiPropertyFlags::Phantom"}
-		s %Name{"AddAngularImpulse"}
-		Uuid %ReturnValue{u4{3165345975093947544,14558278124303459847}}
-		s %Type{"xiiFunctionType::Member"}
-	}
-}
-o
-{
 	Uuid %id{u4{5052347763945628380,435550393878035160}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -306,24 +285,6 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiRenderComponent"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{4223064152664976573,910258779988860111}}
-	s %t{"xiiReflectedFunctionDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Arguments{}
-		VarArray %Attributes
-		{
-			Uuid{u4{10130318493716134149,14854217906881867242}}
-		}
-		s %Flags{"xiiPropertyFlags::Phantom"}
-		s %Name{"GetObjectFilterID"}
-		Uuid %ReturnValue{u4{8551803194024975172,3949625858586779351}}
-		s %Type{"xiiFunctionType::Member"}
 	}
 }
 o
@@ -413,35 +374,17 @@ o
 }
 o
 {
-	Uuid %id{u4{9235234317869878335,2526813599313653628}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{""}
-		s %Type{""}
-	}
-}
-o
-{
 	Uuid %id{u4{6414034584094812046,2670443607027281695}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes
-		{
-			Uuid{u4{17144188345330062873,11430747205112248435}}
-			Uuid{u4{64759760751786278,16289724400394034969}}
-		}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiJoltShapeComponent"}
-		s %PluginName{"xiiJoltPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{2381144161755210801,3896766463856635456}}
-		}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
 		s %TypeName{"xiiJoltShapeSphereComponent"}
 		u3 %TypeVersion{1}
 	}
@@ -453,259 +396,14 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes
-		{
-			Uuid{u4{9537462389341218451,16354315824372372649}}
-		}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
-		VarArray %Functions
-		{
-			Uuid{u4{9507271833316579640,13663311720101319475}}
-			Uuid{u4{6570854132063673411,3414606304128126343}}
-			Uuid{u4{4532084198365575230,2880484663330978136}}
-			Uuid{u4{11383102437802408404,158012747530598139}}
-		}
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
 		s %ParentTypeName{"xiiJoltActorComponent"}
-		s %PluginName{"xiiJoltPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{3724948625058201916,5588895077384321136}}
-			Uuid{u4{11608430872018015922,8786441735714996027}}
-			Uuid{u4{10698737181464855449,4224959083277744959}}
-			Uuid{u4{18371131040565977217,11046669988638772520}}
-			Uuid{u4{12136041215693643724,8214632851221014573}}
-			Uuid{u4{16312200937546844758,14424622119022511368}}
-			Uuid{u4{4499233985605029841,16121677114934286883}}
-			Uuid{u4{10549935596288019655,4790946338812659008}}
-			Uuid{u4{16474052232692706107,3867006360479536669}}
-			Uuid{u4{11092408773532439421,16864832110940449678}}
-			Uuid{u4{17865795296660308802,17474262176029567488}}
-			Uuid{u4{10940818802086084013,3579744294232491538}}
-		}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
 		s %TypeName{"xiiJoltDynamicActorComponent"}
 		u3 %TypeVersion{3}
-	}
-}
-o
-{
-	Uuid %id{u4{4532084198365575230,2880484663330978136}}
-	s %t{"xiiReflectedFunctionDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Arguments
-		{
-			Uuid{u4{1196394534330279720,16834071339376222497}}
-		}
-		VarArray %Attributes
-		{
-			Uuid{u4{2414780162024159643,5661457929728004417}}
-		}
-		s %Flags{"xiiPropertyFlags::Phantom"}
-		s %Name{"AddAngularForce"}
-		Uuid %ReturnValue{u4{9235234317869878335,2526813599313653628}}
-		s %Type{"xiiFunctionType::Member"}
-	}
-}
-o
-{
-	Uuid %id{u4{3588768054938814028,3215656824877260605}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{554866880630819810,6534495815995506935}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"CollisionLayer"}
-		s %Type{"xiiUInt8"}
-	}
-}
-o
-{
-	Uuid %id{u4{1305005527344897998,3243465523490277176}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{""}
-		s %Type{""}
-	}
-}
-o
-{
-	Uuid %id{u4{15038607262666562219,3412529469139095867}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Value{0xCDCC4C3E}
-	}
-}
-o
-{
-	Uuid %id{u4{6570854132063673411,3414606304128126343}}
-	s %t{"xiiReflectedFunctionDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Arguments
-		{
-			Uuid{u4{16528828553156293400,14744235608133206762}}
-		}
-		VarArray %Attributes
-		{
-			Uuid{u4{13486697321034449504,11428742856327392739}}
-		}
-		s %Flags{"xiiPropertyFlags::Phantom"}
-		s %Name{"AddLinearImpulse"}
-		Uuid %ReturnValue{u4{1640868432881756097,10241283039652731816}}
-		s %Type{"xiiFunctionType::Member"}
-	}
-}
-o
-{
-	Uuid %id{u4{8403609900263547059,3450722767968233560}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Value{0x0000803F}
-	}
-}
-o
-{
-	Uuid %id{u4{10940818802086084013,3579744294232491538}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"CenterOfMass"}
-		s %Type{"xiiVec3"}
-	}
-}
-o
-{
-	Uuid %id{u4{16296465264087808565,3657339176534570109}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{0}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::Default"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{16474052232692706107,3867006360479536669}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"ContinuousCollisionDetection"}
-		s %Type{"bool"}
-	}
-}
-o
-{
-	Uuid %id{u4{2381144161755210801,3896766463856635456}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{652853239886891106,6454309787477864937}}
-			Uuid{u4{5630563890272913723,12850376528644494813}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"Radius"}
-		s %Type{"float"}
-	}
-}
-o
-{
-	Uuid %id{u4{8551803194024975172,3949625858586779351}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{"xiiPropertyFlags::StandardType"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{10698737181464855449,4224959083277744959}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{11888866137245319305,4353633578074270612}}
-			Uuid{u4{8475546383197574438,17184045387708886858}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"Mass"}
-		s %Type{"float"}
-	}
-}
-o
-{
-	Uuid %id{u4{11888866137245319305,4353633578074270612}}
-	s %t{"xiiSuffixAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Suffix{" kg"}
-	}
-}
-o
-{
-	Uuid %id{u4{13401654918308108638,4543318808605497109}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{16}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::RollYReactions"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{10549935596288019655,4790946338812659008}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{13701761053249176873,12549110176779505083}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"AngularDamping"}
-		s %Type{"float"}
 	}
 }
 o
@@ -727,69 +425,16 @@ o
 }
 o
 {
-	Uuid %id{u4{1378523494918686120,4967057771785454512}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{2}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::ImpactReactions"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{3724948625058201916,5588895077384321136}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"Kinematic"}
-		s %Type{"bool"}
-	}
-}
-o
-{
-	Uuid %id{u4{2414780162024159643,5661457929728004417}}
-	s %t{"xiiScriptableFunctionAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Arg1{"vForce"}
-		s %Arg2{""}
-		s %Arg3{""}
-		s %Arg4{""}
-		s %Arg5{""}
-		s %Arg6{""}
-		u1 %ArgType1{0}
-		u1 %ArgType2{0}
-		u1 %ArgType3{0}
-		u1 %ArgType4{0}
-		u1 %ArgType5{0}
-		u1 %ArgType6{0}
-	}
-}
-o
-{
 	Uuid %id{u4{7585814060012121015,6232069171066306752}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes
-		{
-			Uuid{u4{17018672408644419573,17045028930278118873}}
-		}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Phantom"}
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Minimal"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
-		s %PluginName{"xiiJoltPlugin"}
+		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties{}
 		s %TypeName{"xiiJoltShapeComponent"}
 		u3 %TypeVersion{1}
@@ -803,106 +448,13 @@ o
 	p
 	{
 		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiJoltActorComponent"}
-		s %PluginName{"xiiJoltPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{9047450165673720845,8741240425564322031}}
-		}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
 		s %TypeName{"xiiJoltTriggerComponent"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{652853239886891106,6454309787477864937}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Value{0x0000003F}
-	}
-}
-o
-{
-	Uuid %id{u4{554866880630819810,6534495815995506935}}
-	s %t{"xiiDynamicEnumAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %DynamicEnum{"PhysicsCollisionLayer"}
-	}
-}
-o
-{
-	Uuid %id{u4{976671419616339629,7535741236531564179}}
-	s %t{"xiiCategoryAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Category{"Physics/Jolt/Actors"}
-	}
-}
-o
-{
-	Uuid %id{u4{9405260591194948724,7617407434472897459}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{32}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::RollZReactions"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{12136041215693643724,8214632851221014573}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{8038503845627208019,13689266732018962716}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Phantom"}
-		s %Name{"Surface"}
-		s %Type{"xiiConstCharPtr"}
-	}
-}
-o
-{
-	Uuid %id{u4{9047450165673720845,8741240425564322031}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Phantom"}
-		s %Name{"TriggerMessage"}
-		s %Type{"xiiConstCharPtr"}
-	}
-}
-o
-{
-	Uuid %id{u4{11608430872018015922,8786441735714996027}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"StartAsleep"}
-		s %Type{"bool"}
 	}
 }
 o
@@ -941,54 +493,19 @@ o
 }
 o
 {
-	Uuid %id{u4{12352836022933424666,9484607984499033918}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{4}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::SlideReactions"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
 	Uuid %id{u4{12866430258799426915,9950718243420055615}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes
-		{
-			Uuid{u4{976671419616339629,7535741236531564179}}
-		}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Phantom"}
-		VarArray %Functions
-		{
-			Uuid{u4{4223064152664976573,910258779988860111}}
-		}
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
-		s %PluginName{"xiiJoltPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{3588768054938814028,3215656824877260605}}
-		}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
 		s %TypeName{"xiiJoltActorComponent"}
 		u3 %TypeVersion{2}
-	}
-}
-o
-{
-	Uuid %id{u4{1640868432881756097,10241283039652731816}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{""}
-		s %Type{""}
 	}
 }
 o
@@ -1023,228 +540,6 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiExposedSceneProperty"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{12406780163942938387,10778378960016093168}}
-	s %t{"xiiSuffixAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Suffix{" kg/m^3"}
-	}
-}
-o
-{
-	Uuid %id{u4{18371131040565977217,11046669988638772520}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{17288095322967207461,16652993697078466456}}
-			Uuid{u4{12406780163942938387,10778378960016093168}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"Density"}
-		s %Type{"float"}
-	}
-}
-o
-{
-	Uuid %id{u4{5313064206687080655,11296162647850417854}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Constant"}
-		u3 %ConstantValue{8}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::ReadOnly"}
-		s %Name{"xiiOnJoltContact::RollXReactions"}
-		s %Type{"xiiUInt32"}
-	}
-}
-o
-{
-	Uuid %id{u4{13486697321034449504,11428742856327392739}}
-	s %t{"xiiScriptableFunctionAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Arg1{"vImpulse"}
-		s %Arg2{""}
-		s %Arg3{""}
-		s %Arg4{""}
-		s %Arg5{""}
-		s %Arg6{""}
-		u1 %ArgType1{0}
-		u1 %ArgType2{0}
-		u1 %ArgType3{0}
-		u1 %ArgType4{0}
-		u1 %ArgType5{0}
-		u1 %ArgType6{0}
-	}
-}
-o
-{
-	Uuid %id{u4{17144188345330062873,11430747205112248435}}
-	s %t{"xiiSphereManipulatorAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Property1{"Radius"}
-		s %Property2{""}
-		s %Property3{""}
-		s %Property4{""}
-		s %Property5{""}
-		s %Property6{""}
-	}
-}
-o
-{
-	Uuid %id{u4{1806336801447951491,12423625255756299695}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Reference"}
-		s %Type{"xiiVec3"}
-	}
-}
-o
-{
-	Uuid %id{u4{13701761053249176873,12549110176779505083}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Value{0xCDCC4C3E}
-	}
-}
-o
-{
-	Uuid %id{u4{5630563890272913723,12850376528644494813}}
-	s %t{"xiiClampValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Min{0}
-	}
-}
-o
-{
-	Uuid %id{u4{14998615817151926124,13483782274229131212}}
-	s %t{"xiiScriptableFunctionAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Arg1{"vImpulse"}
-		s %Arg2{""}
-		s %Arg3{""}
-		s %Arg4{""}
-		s %Arg5{""}
-		s %Arg6{""}
-		u1 %ArgType1{0}
-		u1 %ArgType2{0}
-		u1 %ArgType3{0}
-		u1 %ArgType4{0}
-		u1 %ArgType5{0}
-		u1 %ArgType6{0}
-	}
-}
-o
-{
-	Uuid %id{u4{9507271833316579640,13663311720101319475}}
-	s %t{"xiiReflectedFunctionDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Arguments
-		{
-			Uuid{u4{12028275259175581146,17715258165819937881}}
-		}
-		VarArray %Attributes
-		{
-			Uuid{u4{8950929627563905570,16964791269497387963}}
-		}
-		s %Flags{"xiiPropertyFlags::Phantom"}
-		s %Name{"AddLinearForce"}
-		Uuid %ReturnValue{u4{1305005527344897998,3243465523490277176}}
-		s %Type{"xiiFunctionType::Member"}
-	}
-}
-o
-{
-	Uuid %id{u4{8038503845627208019,13689266732018962716}}
-	s %t{"xiiAssetBrowserAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Filter{";CompatibleAsset_Surface;"}
-	}
-}
-o
-{
-	Uuid %id{u4{16312200937546844758,14424622119022511368}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{8403609900263547059,3450722767968233560}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"GravityFactor"}
-		s %Type{"float"}
-	}
-}
-o
-{
-	Uuid %id{u4{3165345975093947544,14558278124303459847}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{""}
-		s %Type{""}
-	}
-}
-o
-{
-	Uuid %id{u4{16528828553156293400,14744235608133206762}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Reference"}
-		s %Type{"xiiVec3"}
-	}
-}
-o
-{
-	Uuid %id{u4{10130318493716134149,14854217906881867242}}
-	s %t{"xiiScriptableFunctionAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Arg1{""}
-		s %Arg2{""}
-		s %Arg3{""}
-		s %Arg4{""}
-		s %Arg5{""}
-		s %Arg6{""}
-		u1 %ArgType1{0}
-		u1 %ArgType2{0}
-		u1 %ArgType3{0}
-		u1 %ArgType4{0}
-		u1 %ArgType5{0}
-		u1 %ArgType6{0}
 	}
 }
 o
@@ -1306,171 +601,13 @@ o
 	p
 	{
 		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Bitflags|xiiTypeFlags::Phantom"}
+		s %Flags{"xiiTypeFlags::Bitflags|xiiTypeFlags::Minimal"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiBitflagsBase"}
-		s %PluginName{"xiiJoltPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{16296465264087808565,3657339176534570109}}
-			Uuid{u4{1378523494918686120,4967057771785454512}}
-			Uuid{u4{12352836022933424666,9484607984499033918}}
-			Uuid{u4{5313064206687080655,11296162647850417854}}
-			Uuid{u4{13401654918308108638,4543318808605497109}}
-			Uuid{u4{9405260591194948724,7617407434472897459}}
-		}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
 		s %TypeName{"xiiOnJoltContact"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{4499233985605029841,16121677114934286883}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes
-		{
-			Uuid{u4{15038607262666562219,3412529469139095867}}
-		}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"LinearDamping"}
-		s %Type{"float"}
-	}
-}
-o
-{
-	Uuid %id{u4{64759760751786278,16289724400394034969}}
-	s %t{"xiiSphereVisualizerAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Anchor{""}
-		Color %Color{f{0x71941A3F,0x782DE03D,0x70944E3F,0x0000803F}}
-		Vec3 %OffsetOrScale{f{0,0,0}}
-		s %Property1{"Radius"}
-		s %Property2{""}
-		s %Property3{""}
-		s %Property4{""}
-		s %Property5{""}
-	}
-}
-o
-{
-	Uuid %id{u4{9537462389341218451,16354315824372372649}}
-	s %t{"xiiTransformManipulatorAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Property1{"CenterOfMass"}
-		s %Property2{""}
-		s %Property3{""}
-		s %Property4{""}
-		s %Property5{""}
-		s %Property6{""}
-	}
-}
-o
-{
-	Uuid %id{u4{17288095322967207461,16652993697078466456}}
-	s %t{"xiiDefaultValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Value{0x0000C842}
-	}
-}
-o
-{
-	Uuid %id{u4{1196394534330279720,16834071339376222497}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Reference"}
-		s %Type{"xiiVec3"}
-	}
-}
-o
-{
-	Uuid %id{u4{11092408773532439421,16864832110940449678}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::Bitflags|xiiPropertyFlags::Phantom"}
-		s %Name{"OnContact"}
-		s %Type{"xiiOnJoltContact"}
-	}
-}
-o
-{
-	Uuid %id{u4{8950929627563905570,16964791269497387963}}
-	s %t{"xiiScriptableFunctionAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Arg1{"vForce"}
-		s %Arg2{""}
-		s %Arg3{""}
-		s %Arg4{""}
-		s %Arg5{""}
-		s %Arg6{""}
-		u1 %ArgType1{0}
-		u1 %ArgType2{0}
-		u1 %ArgType3{0}
-		u1 %ArgType4{0}
-		u1 %ArgType5{0}
-		u1 %ArgType6{0}
-	}
-}
-o
-{
-	Uuid %id{u4{17018672408644419573,17045028930278118873}}
-	s %t{"xiiCategoryAttribute"}
-	u3 %v{1}
-	p
-	{
-		s %Category{"Physics/Jolt/Shapes"}
-	}
-}
-o
-{
-	Uuid %id{u4{8475546383197574438,17184045387708886858}}
-	s %t{"xiiClampValueAttribute"}
-	u3 %v{1}
-	p
-	{
-		f %Min{0}
-	}
-}
-o
-{
-	Uuid %id{u4{17865795296660308802,17474262176029567488}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
-		s %Name{"CustomCenterOfMass"}
-		s %Type{"bool"}
-	}
-}
-o
-{
-	Uuid %id{u4{12028275259175581146,17715258165819937881}}
-	s %t{"xiiFunctionArgumentDescriptor"}
-	u3 %v{1}
-	p
-	{
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Reference"}
-		s %Type{"xiiVec3"}
 	}
 }
 }
