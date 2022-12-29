@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{8301026003886828307}
+		u4 %Hash{2852745579273187290}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -218,7 +218,7 @@ o
 		i1 %EditorShortcut{-1}
 		VarArray %ExcludeTags{}
 		f %ExposureCompensation{0}
-		f %FOV{0x00007042}
+		f %FOV{0x0000B442}
 		f %FarPlane{0x0000C842}
 		f %ISO{0x0000C842}
 		VarArray %IncludeTags{}

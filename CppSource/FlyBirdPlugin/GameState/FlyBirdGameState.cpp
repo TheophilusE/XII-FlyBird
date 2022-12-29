@@ -18,7 +18,7 @@ xiiCVarBool cvar_PlayerAlive("FlyBird.PlayerAlive", true, xiiCVarFlags::Default,
 
 xiiCVarInt cvar_PlayerScore("FlyBird.PlayerScore", 0, xiiCVarFlags::Save, "The player's current score.");
 
-xiiCVarFloat cvar_PlayerJumpImpulse("FlyBird.JumpImpulse", 150.0f, xiiCVarFlags::Default, "The player's jump impulse");
+xiiCVarFloat cvar_PlayerJumpImpulse("FlyBird.JumpImpulse", 50.0f, xiiCVarFlags::Default, "The player's jump impulse");
 
 
 XII_BEGIN_DYNAMIC_REFLECTED_TYPE(FlyBirdGameState, 1, xiiRTTIDefaultAllocator<FlyBirdGameState>)
@@ -117,7 +117,7 @@ void FlyBirdGameState::ProcessInput()
     return;
   }
 
-  if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "Fly") == xiiKeyState::Down)
+  if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "Fly") == xiiKeyState::Down && cvar_PlayerAlive)
   {
     xiiJoltDynamicActorComponent* pDynamicActor = nullptr;
     pPlayerObject->TryGetComponentOfBaseType(pDynamicActor);
