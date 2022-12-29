@@ -9,6 +9,7 @@
 #include <JoltPlugin/Actors/JoltDynamicActorComponent.h>
 #include <RendererCore/Debug/DebugRenderer.h>
 #include <RendererCore/Meshes/MeshComponent.h>
+#include <GameEngine/Gameplay/BlackboardComponent.h>
 
 /// CVars
 
@@ -117,6 +118,14 @@ void FlyBirdGameState::ProcessInput()
     return;
   }
 
+  // Retrieve blackboard component for animation
+  xiiBlackboardComponent* pAnimationBoard = nullptr;
+  if (!pPlayerObject->FindChildByName("Mesh")->TryGetComponentOfBaseType(pAnimationBoard))
+  {
+    xiiLog::Error("Failed to retrieve player animation blackboard '{0}'", "Player");
+    return;
+  }
+
   if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "Fly") == xiiKeyState::Down && cvar_PlayerAlive)
   {
     xiiJoltDynamicActorComponent* pDynamicActor = nullptr;
@@ -124,6 +133,14 @@ void FlyBirdGameState::ProcessInput()
 
     // Apply upward impulse
     pDynamicActor->AddLinearImpulse(xiiVec3(0, 0, cvar_PlayerJumpImpulse * pWorld->GetClock().GetTimeDiff().AsFloatInSeconds()));
+
+    // Set blackboard entry to update animation using the fly animation.
+    pAnimationBoard->SetEntryValue("IsFly", 1);
+  }
+  else
+  {
+    // Set blackboard entry to update animation using the fly stay animation.
+    pAnimationBoard->SetEntryValue("IsFly", 0);
   }
 }
 

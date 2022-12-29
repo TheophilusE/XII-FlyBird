@@ -11,7 +11,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{7384169306099483801,4659820462203987710}}
-		u4 %Hash{8766847483241112580}
+		u4 %Hash{14661900479402507622}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{5965072728646065637,17953005490508715990}}
@@ -19,6 +19,7 @@ o
 		VarArray %Outputs{}
 		VarArray %References
 		{
+			s{"{ b9790b73-6a55-4fa4-a486-c92e08b556c5 }"}
 			s{"{ f4c06b91-a7f0-40a6-a2de-7b3e7a60439c }"}
 		}
 	}
@@ -129,6 +130,8 @@ o
 		VarArray %Components
 		{
 			Uuid{u4{8852760760743932570,4933452110652050036}}
+			Uuid{u4{4545250008847270059,5706738807838981900}}
+			Uuid{u4{5357235186640764847,5691077869960735751}}
 		}
 		s %GlobalKey{""}
 		Vec3 %LocalPosition{f{0,0,0}}
@@ -168,6 +171,18 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{5347916346130667163,5226879994371029122}}
+	s %t{"xiiBlackboardEntry"}
+	u3 %v{1}
+	p
+	{
+		s %Flags{""}
+		i3 %InitialValue{0}
+		s %Name{"IsFly"}
 	}
 }
 o
@@ -242,6 +257,35 @@ o
 }
 o
 {
+	Uuid %id{u4{5357235186640764847,5691077869960735751}}
+	s %t{"xiiAnimationControllerComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		s %AnimController{"{ b9790b73-6a55-4fa4-a486-c92e08b556c5 }"}
+		s %RootMotionMode{"xiiRootMotionMode::Ignore"}
+	}
+}
+o
+{
+	Uuid %id{u4{4545250008847270059,5706738807838981900}}
+	s %t{"xiiBlackboardComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		s %BlackboardName{"FlyAnimation"}
+		VarArray %Entries
+		{
+			Uuid{u4{5347916346130667163,5226879994371029122}}
+		}
+		b %SendEntryChangedMessage{0}
+		b %ShowDebugInfo{0}
+	}
+}
+o
+{
 	Uuid %id{u4{5961404622964515206,5721409235508015705}}
 	s %t{"xiiJoltTriggerComponent"}
 	u3 %v{1}
@@ -284,6 +328,23 @@ o
 		s %PluginName{"Static"}
 		VarArray %Properties{}
 		s %TypeName{"xiiRenderComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{11717925576533547649,1200385243874829982}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Bitflags|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiBitflagsBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiBlackboardEntryFlags"}
 		u3 %TypeVersion{1}
 	}
 }
@@ -408,6 +469,23 @@ o
 }
 o
 {
+	Uuid %id{u4{6576176508372260,4269869372425676280}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::IsEnum|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiRootMotionMode"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
 	Uuid %id{u4{7113270210448903041,4914649027248066584}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -454,6 +532,23 @@ o
 		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties{}
 		s %TypeName{"xiiJoltTriggerComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{6652096220196747150,8416823400247563354}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiBlackboardComponent"}
 		u3 %TypeVersion{1}
 	}
 }
@@ -539,6 +634,40 @@ o
 		s %PluginName{"xiiEditorPluginScene"}
 		VarArray %Properties{}
 		s %TypeName{"xiiExposedSceneProperty"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{12098817751999957300,12804400681368090839}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiBlackboardEntry"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{1970334666794784821,13734676534785121113}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiAnimationControllerComponent"}
 		u3 %TypeVersion{1}
 	}
 }
