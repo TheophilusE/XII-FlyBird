@@ -33,7 +33,13 @@ void ObstacleComponent::OnSimulationStarted()
 
   // Assign a random height to the object
   xiiVec3 currentPosition = GetOwner()->GetGlobalPosition();
-  currentPosition.y += GetWorld()->GetRandomNumberGenerator().FloatInRange(m_vRandomHeightRange.x, m_vRandomHeightRange.y);
+
+  float randomHeight = GetWorld()->GetRandomNumberGenerator().FloatInRange(m_vRandomHeightRange.x, m_vRandomHeightRange.y);
+  currentPosition.z += randomHeight;
+
+#if 0
+  xiiLog::Info("Spawned obstacle with random height {0}, Current Position Z {1}", randomHeight, currentPosition.z);
+#endif
 
   GetOwner()->SetGlobalPosition(currentPosition);
 }
@@ -55,7 +61,7 @@ void ObstacleComponent::Update()
   GetOwner()->SetGlobalPosition(objectPosition);
 
   // Destroy object if close to the world origin
-  if (GetOwner()->GetGlobalPosition().DistanceSquared(xiiVec3(0)) < xiiMath::Abs(m_vRandomHeightRange.y))
+  if (GetOwner()->GetGlobalPosition().DistanceSquared(xiiVec3(0)) < 20)
   {
     GetWorld()->DeleteObjectDelayed(GetOwner()->GetHandle());
   }

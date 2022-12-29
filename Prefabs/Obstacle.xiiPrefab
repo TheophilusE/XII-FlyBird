@@ -21,7 +21,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{14353708220123666328,5262473045461946578}}
-		u4 %Hash{1149640910269215368}
+		u4 %Hash{15862764343579523361}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{3337417960680536313,1431945298960240645}}
@@ -72,7 +72,7 @@ o
 	p
 	{
 		b %Active{1}
-		Vec2 %RandomHeightRange{f{0x000048C2,0x00004842}}
+		Vec2 %RandomHeightRange{f{0x0000A0C1,0x0000A041}}
 		f %Speed{0x0000F041}
 	}
 }
