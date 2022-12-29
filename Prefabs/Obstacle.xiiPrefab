@@ -21,7 +21,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{14353708220123666328,5262473045461946578}}
-		u4 %Hash{14009299957326433204}
+		u4 %Hash{1149640910269215368}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{3337417960680536313,1431945298960240645}}
@@ -62,6 +62,18 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{572463653625611416,4708229067540534366}}
+	s %t{"ObstacleComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		Vec2 %RandomHeightRange{f{0x000048C2,0x00004842}}
+		f %Speed{0x0000F041}
 	}
 }
 o
@@ -118,7 +130,7 @@ o
 		}
 		VarArray %Components
 		{
-			Uuid{u4{9870630229781642151,5288569074468655842}}
+			Uuid{u4{572463653625611416,4708229067540534366}}
 		}
 		s %GlobalKey{""}
 		Vec3 %LocalPosition{f{0,0,0}}
@@ -255,18 +267,6 @@ o
 		b %Active{1}
 		u1 %CollisionLayer{2}
 		s %TriggerMessage{"Obstacle"}
-	}
-}
-o
-{
-	Uuid %id{u4{9870630229781642151,5288569074468655842}}
-	s %t{"ObstacleComponent"}
-	u3 %v{1}
-	p
-	{
-		b %Active{1}
-		Vec2 %RandomHeightRange{f{0x0000A0C1,0x0000A041}}
-		f %Speed{0x0000803F}
 	}
 }
 o

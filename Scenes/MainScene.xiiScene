@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{2604213364920019038}
+		u4 %Hash{16401405955223110763}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -141,7 +141,7 @@ o
 	{
 		b %Active{1}
 		s %GlobalKey{"Player"}
-		Vec3 %PositionOffset{f{0x00002041,0x0000A041,0x00000040}}
+		Vec3 %PositionOffset{f{0x00002041,0x0000F041,0x00000040}}
 		f %Speed{0x9999993E}
 	}
 }
@@ -171,7 +171,7 @@ o
 		i1 %EditorShortcut{-1}
 		VarArray %ExcludeTags{}
 		f %ExposureCompensation{0}
-		f %FOV{0x0000B442}
+		f %FOV{0x00007042}
 		f %FarPlane{0x0000C842}
 		f %ISO{0x0000C842}
 		VarArray %IncludeTags{}

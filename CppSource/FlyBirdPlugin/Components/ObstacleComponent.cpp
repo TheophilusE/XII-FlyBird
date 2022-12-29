@@ -24,7 +24,7 @@ XII_BEGIN_COMPONENT_TYPE(ObstacleComponent, 1 /* version */, xiiComponentMode::D
 XII_END_COMPONENT_TYPE
 // clang-format on
 
-ObstacleComponent::ObstacleComponent() = default;
+ObstacleComponent::ObstacleComponent()  = default;
 ObstacleComponent::~ObstacleComponent() = default;
 
 void ObstacleComponent::OnSimulationStarted()
@@ -48,6 +48,10 @@ void ObstacleComponent::Update()
 
   objectPosition.x -= (m_fSpeed * GetWorld()->GetClock().GetTimeDiff().AsFloatInSeconds());
 
+#if 0
+  xiiLog::Info("Current Time Diff {0}, Current Object Pos {1}, Current Speed {2}", GetWorld()->GetClock().GetTimeDiff().AsFloatInSeconds(), objectPosition.x, m_fSpeed);
+#endif
+
   GetOwner()->SetGlobalPosition(objectPosition);
 
   // Destroy object if close to the world origin
@@ -63,6 +67,7 @@ void ObstacleComponent::SerializeComponent(xiiWorldWriter& stream) const
 
   auto& s = stream.GetStream();
 
+  s << m_fSpeed;
   s << m_vRandomHeightRange;
 }
 
@@ -73,5 +78,6 @@ void ObstacleComponent::DeserializeComponent(xiiWorldReader& stream)
 
   auto& s = stream.GetStream();
 
+  s >> m_fSpeed;
   s >> m_vRandomHeightRange;
 }
