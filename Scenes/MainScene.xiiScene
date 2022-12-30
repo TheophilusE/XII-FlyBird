@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{16159739133667255842,10733304359925038653}}
-		u4 %Hash{2852745579273187290}
+		u4 %Hash{14206173628180593584}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -19,6 +19,7 @@ o
 			s{"{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 }"}
 			s{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
 			s{"{ aa6cf007-c3b0-4efa-8874-8c1b8f7f8fca }"}
+			s{"{ d6aacdd6-59ba-4900-8e7d-d8c3ef942d47 }"}
 		}
 	}
 }
@@ -70,6 +71,32 @@ o
 		f %PenumbraSize{0xCDCCCC3D}
 		f %SlopeBias{0x0000803E}
 		f %SplitModeWeight{0x3333333F}
+	}
+}
+o
+{
+	Uuid %id{u4{651471944310161570,4693753077803337862}}
+	s %t{"xiiGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{8626692744219266721,5446444130133648726}}
+		}
+		s %GlobalKey{""}
+		Vec3 %LocalPosition{f{0,0,0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"xiiObjectMode::ForceDynamic"}
+		s %Name{"LevelScript"}
+		VarArray %Tags
+		{
+			s{"CastShadow"}
+		}
 	}
 }
 o
@@ -278,13 +305,30 @@ o
 }
 o
 {
+	Uuid %id{u4{8626692744219266721,5446444130133648726}}
+	s %t{"xiiTypeScriptComponent"}
+	u3 %v{4}
+	p
+	{
+		b %Active{1}
+		b %HandleGlobalEvents{1}
+		VarDict %Parameters{}
+		b %PassThroughUnhandledEvents{0}
+		s %Script{"{ d6aacdd6-59ba-4900-8e7d-d8c3ef942d47 }"}
+	}
+}
+o
+{
 	Uuid %id{u4{5166425742529995429,5562399254696729571}}
 	s %t{"xiiPrefabReferenceComponent"}
 	u3 %v{4}
 	p
 	{
 		b %Active{1}
-		VarDict %Parameters{}
+		VarDict %Parameters
+		{
+			d %GravityFactor{0}
+		}
 		s %Prefab{"{ 86c3e6fe-0205-40ab-9904-6763dcd67966 }"}
 	}
 }
@@ -328,6 +372,7 @@ o
 			Uuid{u4{10258994852426184018,10299915459560677696}}
 			Uuid{u4{13136223515022995085,5193605965675756176}}
 			Uuid{u4{11605386600209319615,4890179645831117397}}
+			Uuid{u4{651471944310161570,4693753077803337862}}
 		}
 		Uuid %Settings{u4{12070020047104415032,10262165962651294762}}
 	}
@@ -1262,6 +1307,23 @@ o
 }
 o
 {
+	Uuid %id{u4{10618245633446215510,5860315633164980819}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"xiiEventMessageHandlerComponent"}
+		u3 %TypeVersion{3}
+	}
+}
+o
+{
 	Uuid %id{u4{17137289953408618306,6680036317484412198}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1364,6 +1426,23 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiSceneDocumentSettingsBase"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{8614125061294656017,9298787634358739854}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiEventMessageHandlerComponent"}
+		s %PluginName{"xiiEditorPluginTypeScript"}
+		VarArray %Properties{}
+		s %TypeName{"xiiTypeScriptComponent"}
+		u3 %TypeVersion{4}
 	}
 }
 o

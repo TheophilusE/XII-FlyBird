@@ -5,6 +5,8 @@
 #include <Core/World/World.h>
 #include <FlyBirdPlugin/FlyBirdPluginDLL.h>
 
+class xiiMsgTriggerTriggered;
+
 using PlayerComponentManager = xiiComponentManagerSimple<class PlayerComponent, xiiComponentUpdateType::WhenSimulating>;
 
 class PlayerComponent : public xiiComponent
@@ -27,6 +29,10 @@ protected:
 public:
   PlayerComponent();
   ~PlayerComponent();
+
+protected:
+
+  void OnTriggerActivated(xiiMsgTriggerTriggered& message);
 
 private:
 

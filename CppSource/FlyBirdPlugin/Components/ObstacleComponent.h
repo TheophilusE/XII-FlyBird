@@ -30,10 +30,6 @@ public:
   ObstacleComponent();
   ~ObstacleComponent();
 
-protected:
-
-  void OnTriggerActivated(xiiMsgTriggerTriggered& message);
-
 private:
 
   void Update();

@@ -21,12 +21,6 @@ XII_BEGIN_COMPONENT_TYPE(ObstacleComponent, 1 /* version */, xiiComponentMode::D
     new xiiCategoryAttribute("FlyBird"), // Component menu group
   }
   XII_END_ATTRIBUTES;
-
-  XII_BEGIN_MESSAGEHANDLERS
-  {
-    XII_MESSAGE_HANDLER(xiiMsgTriggerTriggered, OnTriggerActivated)
-  }
-  XII_END_MESSAGEHANDLERS;
 }
 XII_END_COMPONENT_TYPE
 // clang-format on
@@ -80,11 +74,6 @@ void ObstacleComponent::Update()
     xiiLog::Info("Failed to retrieve obstacle middle trigger");
     return;
   }
-}
-
-void ObstacleComponent::OnTriggerActivated(xiiMsgTriggerTriggered& message)
-{
-  xiiLog::Info("Activated Trigger {0}", message.m_sMessage);
 }
 
 void ObstacleComponent::SerializeComponent(xiiWorldWriter& stream) const

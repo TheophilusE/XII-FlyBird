@@ -2,6 +2,16 @@ HeaderV2
 {
 o
 {
+	Uuid %id{u4{6417634148311950790,731879689085553680}}
+	s %t{"xiiClampValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Min{0}
+	}
+}
+o
+{
 	Uuid %id{u4{7384169306099483801,4659820462203987710}}
 	s %t{"xiiAssetDocumentInfo"}
 	u3 %v{2}
@@ -11,7 +21,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{7384169306099483801,4659820462203987710}}
-		u4 %Hash{8386044527114532904}
+		u4 %Hash{7933346313506272478}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{5965072728646065637,17953005490508715990}}
@@ -26,17 +36,84 @@ o
 }
 o
 {
+	Uuid %id{u4{12254515970968045837,11887892189136705484}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Value{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{12069124830444099400,12853567802539944102}}
+	s %t{"xiiExposedParameter"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{12254515970968045837,11887892189136705484}}
+		}
+		f %DefaultValue{0x0000803F}
+		s %Name{"GravityFactor"}
+		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{1836189122395812243,12977089191571518757}}
+	s %t{"xiiExposedParameter"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{7795779676181446805,14989723855617556746}}
+			Uuid{u4{6417634148311950790,731879689085553680}}
+		}
+		f %DefaultValue{0x0000803F}
+		s %Name{"Mass"}
+		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{7795779676181446805,14989723855617556746}}
+	s %t{"xiiSuffixAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Suffix{" kg"}
+	}
+}
+o
+{
 	Uuid %id{u4{5965072728646065637,17953005490508715990}}
 	s %t{"xiiExposedParameters"}
 	u3 %v{3}
 	p
 	{
-		VarArray %Parameters{}
+		VarArray %Parameters
+		{
+			Uuid{u4{1836189122395812243,12977089191571518757}}
+			Uuid{u4{12069124830444099400,12853567802539944102}}
+		}
 	}
 }
 }
 Objects
 {
+o
+{
+	Uuid %id{u4{14936100164001180033,4672409946192261696}}
+	s %t{"PlayerComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+	}
+}
 o
 {
 	Uuid %id{u4{488741711175020928,4864469336648252305}}
@@ -53,6 +130,7 @@ o
 		VarArray %Components
 		{
 			Uuid{u4{3892041119027850939,5354554176531588609}}
+			Uuid{u4{14936100164001180033,4672409946192261696}}
 		}
 		s %GlobalKey{"Player"}
 		Vec3 %LocalPosition{f{0,0,0}}
@@ -78,7 +156,6 @@ o
 		VarArray %Children
 		{
 			Uuid{u4{5097997979726931624,5587928841122291178}}
-			Uuid{u4{5624177188450066306,5216852484365159692}}
 		}
 		VarArray %Components{}
 		s %GlobalKey{""}
@@ -96,17 +173,6 @@ o
 }
 o
 {
-	Uuid %id{u4{744804620135394746,4932886988944039962}}
-	s %t{"xiiJoltShapeSphereComponent"}
-	u3 %v{1}
-	p
-	{
-		b %Active{1}
-		f %Radius{0x00004040}
-	}
-}
-o
-{
 	Uuid %id{u4{8852760760743932570,4933452110652050036}}
 	s %t{"xiiAnimatedMeshComponent"}
 	u3 %v{13}
@@ -116,6 +182,18 @@ o
 		Color %Color{f{0x0000803F,0x0000803F,0x0000803F,0x0000803F}}
 		VarArray %Materials{}
 		s %Mesh{"{ f4c06b91-a7f0-40a6-a2de-7b3e7a60439c }"}
+	}
+}
+o
+{
+	Uuid %id{u4{12689192906912519813,5098407892521243826}}
+	s %t{"xiiExposedSceneProperty"}
+	u3 %v{1}
+	p
+	{
+		s %Name{"Mass"}
+		Uuid %Object{u4{3892041119027850939,5354554176531588609}}
+		s %PropertyPath{"Mass"}
 	}
 }
 o
@@ -148,33 +226,6 @@ o
 }
 o
 {
-	Uuid %id{u4{5624177188450066306,5216852484365159692}}
-	s %t{"xiiGameObject"}
-	u3 %v{1}
-	p
-	{
-		b %Active{0}
-		VarArray %Children{}
-		VarArray %Components
-		{
-			Uuid{u4{5961404622964515206,5721409235508015705}}
-			Uuid{u4{744804620135394746,4932886988944039962}}
-		}
-		s %GlobalKey{""}
-		Vec3 %LocalPosition{f{0,0,0}}
-		Quat %LocalRotation{f{0,0,0,0x0000803F}}
-		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
-		f %LocalUniformScaling{0x0000803F}
-		s %Mode{"xiiObjectMode::Automatic"}
-		s %Name{"Trigger"}
-		VarArray %Tags
-		{
-			s{"CastShadow"}
-		}
-	}
-}
-o
-{
 	Uuid %id{u4{5347916346130667163,5226879994371029122}}
 	s %t{"xiiBlackboardEntry"}
 	u3 %v{1}
@@ -198,6 +249,18 @@ o
 }
 o
 {
+	Uuid %id{u4{10153303947115670207,5327816026712243961}}
+	s %t{"xiiExposedSceneProperty"}
+	u3 %v{1}
+	p
+	{
+		s %Name{"GravityFactor"}
+		Uuid %Object{u4{3892041119027850939,5354554176531588609}}
+		s %PropertyPath{"GravityFactor"}
+	}
+}
+o
+{
 	Uuid %id{u4{3892041119027850939,5354554176531588609}}
 	s %t{"xiiJoltDynamicActorComponent"}
 	u3 %v{3}
@@ -206,7 +269,7 @@ o
 		b %Active{1}
 		f %AngularDamping{0xCDCC4C3E}
 		Vec3 %CenterOfMass{f{0,0,0}}
-		u1 %CollisionLayer{0}
+		u1 %CollisionLayer{6}
 		b %ContinuousCollisionDetection{1}
 		b %CustomCenterOfMass{0}
 		f %Density{0x0000C842}
@@ -226,7 +289,11 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %ExposedProperties{}
+		VarArray %ExposedProperties
+		{
+			Uuid{u4{12689192906912519813,5098407892521243826}}
+			Uuid{u4{10153303947115670207,5327816026712243961}}
+		}
 	}
 }
 o
@@ -282,18 +349,6 @@ o
 		}
 		b %SendEntryChangedMessage{0}
 		b %ShowDebugInfo{0}
-	}
-}
-o
-{
-	Uuid %id{u4{5961404622964515206,5721409235508015705}}
-	s %t{"xiiJoltTriggerComponent"}
-	u3 %v{1}
-	p
-	{
-		b %Active{1}
-		u1 %CollisionLayer{6}
-		s %TriggerMessage{"Triggered!"}
 	}
 }
 o
@@ -457,6 +512,26 @@ o
 }
 o
 {
+	Uuid %id{u4{11303543363110715847,2470578937312806314}}
+	s %t{"xiiReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{7059030851588467650,2597394906134814603}}
+		}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
+		VarArray %Functions{}
+		s %ParentTypeName{"xiiComponent"}
+		s %PluginName{"FlyBirdPlugin"}
+		VarArray %Properties{}
+		s %TypeName{"PlayerComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
 	Uuid %id{u4{12730005971257422923,2484047852288417750}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -481,6 +556,16 @@ o
 	{
 		s %Flags{""}
 		s %Type{""}
+	}
+}
+o
+{
+	Uuid %id{u4{7059030851588467650,2597394906134814603}}
+	s %t{"xiiCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"FlyBird"}
 	}
 }
 o
@@ -875,26 +960,6 @@ o
 }
 o
 {
-	Uuid %id{u4{3447353205618275680,6429524602042103214}}
-	s %t{"xiiReflectedTypeDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
-		VarArray %Functions{}
-		s %ParentTypeName{"xiiJoltActorComponent"}
-		s %PluginName{"FlyBirdPlugin"}
-		VarArray %Properties
-		{
-			Uuid{u4{9047450165673720845,8741240425564322031}}
-		}
-		s %TypeName{"xiiJoltTriggerComponent"}
-		u3 %TypeVersion{1}
-	}
-}
-o
-{
 	Uuid %id{u4{652853239886891106,6454309787477864937}}
 	s %t{"xiiDefaultValueAttribute"}
 	u3 %v{1}
@@ -970,20 +1035,6 @@ o
 		VarArray %Properties{}
 		s %TypeName{"xiiBlackboardComponent"}
 		u3 %TypeVersion{1}
-	}
-}
-o
-{
-	Uuid %id{u4{9047450165673720845,8741240425564322031}}
-	s %t{"xiiReflectedPropertyDescriptor"}
-	u3 %v{2}
-	p
-	{
-		VarArray %Attributes{}
-		s %Category{"xiiPropertyCategory::Member"}
-		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Const|xiiPropertyFlags::Phantom"}
-		s %Name{"TriggerMessage"}
-		s %Type{"xiiConstCharPtr"}
 	}
 }
 o

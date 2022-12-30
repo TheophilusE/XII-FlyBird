@@ -1,5 +1,6 @@
 #include <FlyBirdPlugin/FlyBirdPluginPCH.h>
 
+#include <Core/Messages/TriggerMessage.h>
 #include <Core/WorldSerializer/WorldReader.h>
 #include <Core/WorldSerializer/WorldWriter.h>
 #include <FlyBirdPlugin/Components/PlayerComponent.h>
@@ -18,6 +19,12 @@ XII_BEGIN_COMPONENT_TYPE(PlayerComponent, 1 /* version */, xiiComponentMode::Dyn
     new xiiCategoryAttribute("FlyBird"), // Component menu group
   }
   XII_END_ATTRIBUTES;
+
+  XII_BEGIN_MESSAGEHANDLERS
+  {
+    XII_MESSAGE_HANDLER(xiiMsgTriggerTriggered, OnTriggerActivated)
+  }
+  XII_END_MESSAGEHANDLERS;
 }
 XII_END_COMPONENT_TYPE
 // clang-format on
@@ -32,6 +39,11 @@ void PlayerComponent::OnSimulationStarted()
 
 void PlayerComponent::Update()
 {
+}
+
+void PlayerComponent::OnTriggerActivated(xiiMsgTriggerTriggered& message)
+{
+  xiiLog::Info("Activated Trigger {0}", message.m_sMessage);
 }
 
 void PlayerComponent::SerializeComponent(xiiWorldWriter& stream) const

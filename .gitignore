@@ -354,3 +354,5 @@ AssetCache
 /build/
 /buildUWP/
 Source/Engine/xiiBuildInfo.h
+tsconfig.json
+
