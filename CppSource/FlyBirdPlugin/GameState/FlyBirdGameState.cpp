@@ -6,10 +6,10 @@
 #include <FlyBirdPlugin/GameState/FlyBirdGameState.h>
 #include <Foundation/Configuration/CVar.h>
 #include <Foundation/Logging/Log.h>
+#include <GameEngine/Gameplay/BlackboardComponent.h>
 #include <JoltPlugin/Actors/JoltDynamicActorComponent.h>
 #include <RendererCore/Debug/DebugRenderer.h>
 #include <RendererCore/Meshes/MeshComponent.h>
-#include <GameEngine/Gameplay/BlackboardComponent.h>
 
 /// CVars
 
@@ -126,11 +126,15 @@ void FlyBirdGameState::ProcessInput()
     return;
   }
 
+  xiiJoltDynamicActorComponent* pDynamicActor = nullptr;
+  if (!pPlayerObject->TryGetComponentOfBaseType(pDynamicActor))
+  {
+    xiiLog::Error("Failed to retrieve player dynamic actor component");
+    return;
+  }
+
   if (xiiInputManager::GetInputActionState("FlyBirdPlugin", "Fly") == xiiKeyState::Down && cvar_PlayerAlive)
   {
-    xiiJoltDynamicActorComponent* pDynamicActor = nullptr;
-    pPlayerObject->TryGetComponentOfBaseType(pDynamicActor);
-
     // Apply upward impulse
     pDynamicActor->AddLinearImpulse(xiiVec3(0, 0, cvar_PlayerJumpImpulse * pWorld->GetClock().GetTimeDiff().AsFloatInSeconds()));
 
@@ -141,6 +145,16 @@ void FlyBirdGameState::ProcessInput()
   {
     // Set blackboard entry to update animation using the fly stay animation.
     pAnimationBoard->SetEntryValue("IsFly", 0);
+  }
+
+  // Disable player gravity if is not alive
+  if (!cvar_PlayerAlive)
+  {
+    pDynamicActor->SetGravityFactor(0.0f);
+  }
+  else
+  {
+    pDynamicActor->SetGravityFactor(1.0f);
   }
 }
 
