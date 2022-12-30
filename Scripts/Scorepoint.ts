@@ -28,7 +28,7 @@ export class Scorepoint extends xii.TickedTypescriptComponent {
   // OnDeactivated(): void { }
 
   OnSimulationStarted(): void {
-    this.SetTickInterval(xii.Time.Milliseconds(0));
+    this.SetTickInterval(xii.Time.Milliseconds(1000));
   }
 
   OnTriggerActivated(msg: xii.MsgTriggerTriggered): void {
@@ -36,7 +36,7 @@ export class Scorepoint extends xii.TickedTypescriptComponent {
       // xii.Log.Info("Triggered from TypeScript!");
 
       // Update Player Score
-      let currentScore: number = xii.Debug.ReadCVar_Int("PlayerScore") + 1;
+      let currentScore: number = xii.Debug.ReadCVar_Int("FlyBird.PlayerScore") + 1;
       xii.Debug.WriteCVar_Int("FlyBird.PlayerScore", currentScore);
     }
   }
