@@ -5,6 +5,8 @@
 #include <Core/World/World.h>
 #include <FlyBirdPlugin/FlyBirdPluginDLL.h>
 
+class xiiMsgTriggerTriggered;
+
 using ObstacleComponentManager = xiiComponentManagerSimple<class ObstacleComponent, xiiComponentUpdateType::WhenSimulating>;
 
 class ObstacleComponent : public xiiComponent
@@ -27,6 +29,10 @@ protected:
 public:
   ObstacleComponent();
   ~ObstacleComponent();
+
+protected:
+
+  void OnTriggerActivated(xiiMsgTriggerTriggered& message);
 
 private:
 

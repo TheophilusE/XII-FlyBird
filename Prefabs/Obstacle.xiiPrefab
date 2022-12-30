@@ -21,7 +21,7 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{14353708220123666328,5262473045461946578}}
-		u4 %Hash{15862764343579523361}
+		u4 %Hash{194104496645555821}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{3337417960680536313,1431945298960240645}}
@@ -189,7 +189,7 @@ o
 	p
 	{
 		b %Active{1}
-		Vec3 %HalfExtents{f{0x00000040,0x00000040,0x00001841}}
+		Vec3 %HalfExtents{f{0x00000040,0x00000040,0x66661641}}
 	}
 }
 o
@@ -253,8 +253,8 @@ o
 	p
 	{
 		b %Active{1}
-		u1 %CollisionLayer{6}
-		s %TriggerMessage{"Entrance"}
+		u1 %CollisionLayer{0}
+		s %TriggerMessage{"Checkpoint"}
 	}
 }
 o
@@ -553,6 +553,16 @@ o
 }
 o
 {
+	Uuid %id{u4{7474922381495927530,2929244039281979109}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		f %Value{0x0000803F}
+	}
+}
+o
+{
 	Uuid %id{u4{3588768054938814028,3215656824877260605}}
 	s %t{"xiiReflectedPropertyDescriptor"}
 	u3 %v{2}
@@ -637,7 +647,7 @@ o
 		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Abstract|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
-		s %PluginName{"xiiJoltPlugin"}
+		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties{}
 		s %TypeName{"xiiJoltShapeComponent"}
 		u3 %TypeVersion{1}
@@ -654,7 +664,7 @@ o
 		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiJoltActorComponent"}
-		s %PluginName{"xiiJoltPlugin"}
+		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties
 		{
 			Uuid{u4{9047450165673720845,8741240425564322031}}
@@ -708,12 +718,19 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes{}
-		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Minimal"}
+		VarArray %Attributes
+		{
+			Uuid{u4{5565290305136232469,16265271931339834151}}
+		}
+		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiComponent"}
 		s %PluginName{"FlyBirdPlugin"}
-		VarArray %Properties{}
+		VarArray %Properties
+		{
+			Uuid{u4{17319787768400612550,14994459993834074242}}
+			Uuid{u4{5070950005850252512,12987364950132947118}}
+		}
 		s %TypeName{"ObstacleComponent"}
 		u3 %TypeVersion{1}
 	}
@@ -751,6 +768,16 @@ o
 }
 o
 {
+	Uuid %id{u4{3568653517928596428,9423317982034934545}}
+	s %t{"xiiDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		Vec2 %Value{f{0,0x0000803F}}
+	}
+}
+o
+{
 	Uuid %id{u4{12866430258799426915,9950718243420055615}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -766,7 +793,7 @@ o
 			Uuid{u4{4223064152664976573,910258779988860111}}
 		}
 		s %ParentTypeName{"xiiComponent"}
-		s %PluginName{"xiiJoltPlugin"}
+		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties
 		{
 			Uuid{u4{3588768054938814028,3215656824877260605}}
@@ -829,6 +856,23 @@ o
 }
 o
 {
+	Uuid %id{u4{5070950005850252512,12987364950132947118}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{3568653517928596428,9423317982034934545}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"RandomHeightRange"}
+		s %Type{"xiiVec2"}
+	}
+}
+o
+{
 	Uuid %id{u4{10130318493716134149,14854217906881867242}}
 	s %t{"xiiScriptableFunctionAttribute"}
 	u3 %v{1}
@@ -850,6 +894,23 @@ o
 }
 o
 {
+	Uuid %id{u4{17319787768400612550,14994459993834074242}}
+	s %t{"xiiReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{7474922381495927530,2929244039281979109}}
+		}
+		s %Category{"xiiPropertyCategory::Member"}
+		s %Flags{"xiiPropertyFlags::StandardType|xiiPropertyFlags::Phantom"}
+		s %Name{"Speed"}
+		s %Type{"float"}
+	}
+}
+o
+{
 	Uuid %id{u4{14794018618176842789,15137305899392091152}}
 	s %t{"xiiReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -863,7 +924,7 @@ o
 		s %Flags{"xiiTypeFlags::Class|xiiTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"xiiJoltShapeComponent"}
-		s %PluginName{"xiiJoltPlugin"}
+		s %PluginName{"FlyBirdPlugin"}
 		VarArray %Properties
 		{
 			Uuid{u4{2639640498160620378,12653560310162045836}}
@@ -938,6 +999,16 @@ o
 		s %Property6{""}
 		b %recenter{1}
 		f %scale{0x00000040}
+	}
+}
+o
+{
+	Uuid %id{u4{5565290305136232469,16265271931339834151}}
+	s %t{"xiiCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"FlyBird"}
 	}
 }
 o
