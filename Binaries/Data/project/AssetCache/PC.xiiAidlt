@@ -1,0 +1,13 @@
+{ 0da0a42b-def6-4bf3-b1f0-da87e1fd4a63 };PC/Textures/Eagle/EagleMat.xiiTexture2D
+{ 5ad8b0d4-c21b-48e8-aa52-cb84670bd88e };Common/Models/Eagle/Eagle.xiiSkeleton
+{ 62d3d0d2-0f5a-4908-9857-13b6939d32c7 };Common/Prefabs/Obstacle.xiiObjectGraph
+{ 86c3e6fe-0205-40ab-9904-6763dcd67966 };Common/Prefabs/Eagle.xiiObjectGraph
+{ ProjectDecalAtlas };PC/Decals.xiiTextureAtlas
+{ a77bbe3d-5b72-94f4-2226-37c51fed42e0 };Common/Scenes/MainScene.xiiObjectGraph
+{ aa6cf007-c3b0-4efa-8874-8c1b8f7f8fca };PC/Textures/Sky/Sky.xiiTextureCube
+{ ac3c872d-7d18-4e78-b0f5-d137aea3ef92 };Common/Models/Eagle/EagleFlyStay.xiiAnimationClip
+{ b9790b73-6a55-4fa4-a486-c92e08b556c5 };Common/Models/Eagle/AnimationController.xiiAnimationControllerBin
+{ bcf28fd9-5ac2-4f0e-a9ca-33a8c466b677 };Common/Models/Eagle/EagleFly.xiiAnimationClip
+{ c2d222e7-8fa7-463a-b6e0-750fd0c27473 };Common/Models/Eagle/Eagle.xiiAnimatedMeshAsset_data/Fogel_Mat.xiiMaterialBin
+{ d6aacdd6-59ba-4900-8e7d-d8c3ef942d47 };Common/Scripts/Scorepoint.xiiTypeScriptRes
+{ f4c06b91-a7f0-40a6-a2de-7b3e7a60439c };Common/Models/Eagle/Eagle.xiiAnimatedMesh

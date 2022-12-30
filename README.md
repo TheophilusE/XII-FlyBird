@@ -1,11 +1,11 @@
 # XII Fly Bird
 
-
 ![Banner of an eagle soaring the skies](./Screenshots/Banner.png)
 
 ## Description
 
-#### Video Demo:  <URL HERE>
+#### Video Demo: https://youtu.be/3dwLyYumrUw
+
 
 Flybird is an easy to play game that has one objective, which is to accumulate as many points as possible by soaring through gateways.
 
@@ -15,6 +15,7 @@ Some of the core ideas that were put into the project are listed as follows;
 * Optimizing standard effects through simple means.
 * Console Vars (CVar) for in-game editing.
 * Low level and High level scripting with C++ and Typescript.
+* State-based animation through a finite state machine.
 
 ## Design Choices
 
@@ -111,7 +112,19 @@ if (GetOwner()->GetGlobalPosition().DistanceSquared(xiiVec3(0)) < 20)
     GetWorld()->DeleteObjectDelayed(GetOwner()->GetHandle());
 }
 
-////////// End Obstacle Update
+////////// End Obstacle Update //////////
 ```
 
 With this method, the player is placed conveniently in the coordinate (`100.0, 0, 0`). This makes an convenient method of spawning objects at (`200.0, 0, 0`) and destroying them at (`0.0, 0, 0`).
+
+Most of the logic demo is implemented in C++ and only a small subset, which has to with triggers is implemented in Typescript.
+
+# Screenshots
+
+![Screenshot 1](./Screenshots/Screenshot1.png)
+
+![Screenshot 2](./Screenshots/Screenshot2.png)
+
+![Screenshot 3](./Screenshots/Screenshot3.png)
+
+![Screenshot 4](./Screenshots/Screenshot4.png)

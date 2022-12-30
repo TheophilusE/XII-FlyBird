@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "",
+    "paths": {
+      "*": ["C:/Development/Projects/XII-Engine/FlyBird/*", "C:/Development/temp/XII-Engine/Data/Plugins/*", "C:/Development/temp/XII-Engine/Data/Base/*"]
+    }    
+  }
+}
